@@ -1,8 +1,8 @@
 {
-  "decisions": 2558,
-  "mean_processing_ms": 0.606,
-  "p95_processing_ms": 1.964,
-  "max_processing_ms": 7.688,
+  "decisions": 2769,
+  "mean_processing_ms": 1.079,
+  "p95_processing_ms": 3.733,
+  "max_processing_ms": 10.491,
   "target_ms": 60000,
   "within_target": true
 }

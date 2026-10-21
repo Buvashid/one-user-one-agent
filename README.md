@@ -2,9 +2,11 @@
 
 Evidence-first, deterministic OTT lifecycle agent for the supplied synthetic pack. Python 3.9+; Python standard library only. No API key or external model is required: deterministic replay mode and the supplied scripted-fault stream make the project reproducible offline.
 
+`one_user_one_agent_pack/` is excluded from Git because it contains private assignment data. A fresh-clone reviewer must obtain an authorized copy through the original assignment materials or the organizer, without uploading it here, and place the pack at the repository root as `one_user_one_agent_pack/`. Once that directory exists, run the replay from the repository root with the commands below.
+
 ## Run the complete replay
 
-Run these commands from the repository root (the folder containing `src/` and `one_user_one_agent_pack/`):
+Run these commands from the repository root (the folder containing `src/` and the locally supplied `one_user_one_agent_pack/`):
 
 ```powershell
 python src/agent.py --pack one_user_one_agent_pack --out sample_run

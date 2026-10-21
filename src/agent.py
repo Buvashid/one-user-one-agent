@@ -379,13 +379,112 @@ class Agent:
         self.handled_triggers.add(event.get('event_id'))
         self._update_session_decisions(self._session_key(event))
 
-    def _validate_model_output(self, output):
-        # The deterministic rules engine is authoritative; model output is never action input.
+    def _model_output_error(self, output, user_id=None, at=None, dialect=None):
+        """Validate mock output without allowing it to become trusted evidence."""
         if output is None:
-            return True
+            return None
         if not isinstance(output, dict):
+            return 'model output must be an object'
+
+        allowed = {
+            'goal_id', 'eligible', 'confidence', 'reason',
+            'evidence_refs', 'catalogue_ids', 'dialect', 'availability'
+        }
+        if set(output) - allowed:
+            return 'model output contains unexpected fields'
+        required = {'goal_id', 'eligible', 'confidence', 'reason'}
+        if set(output) & required != required:
+            return 'model output is missing required fields'
+        if not isinstance(output['goal_id'], str):
+            return 'model goal_id must be a string'
+        goal_ids = {g.get('goal_id') for g in self.goal_rules}
+        if output['goal_id'] not in goal_ids:
+            return 'model output contains an unknown goal_id'
+        if not isinstance(output['eligible'], bool):
+            return 'model eligible must be a boolean'
+        if (
+            isinstance(output['confidence'], bool)
+            or not isinstance(output['confidence'], (int, float))
+            or not 0 <= output['confidence'] <= 1
+        ):
+            return 'model confidence must be a number between 0 and 1'
+        if not isinstance(output['reason'], str) or len(output['reason']) > 500:
+            return 'model reason must be a string of at most 500 characters'
+
+        if 'dialect' in output and (
+            not isinstance(output['dialect'], str)
+            or output['dialect'] not in self.titles_by_dialect
+        ):
+            return 'model output contains an unknown dialect'
+        if (
+            output.get('dialect')
+            and dialect
+            and output['dialect'] != dialect
+        ):
+            return 'model dialect claim conflicts with the trigger dialect'
+        if 'availability' in output and not isinstance(output['availability'], bool):
+            return 'model availability must be a boolean'
+        if 'catalogue_ids' in output:
+            ids = output['catalogue_ids']
+            if (
+                not isinstance(ids, list)
+                or any(not isinstance(title_id, str) for title_id in ids)
+                or len(ids) != len(set(ids))
+            ):
+                return 'model catalogue_ids must be a unique list of strings'
+            for title_id in ids:
+                title = self.catalogue.get(title_id)
+                if not title:
+                    return 'model output contains an unknown catalogue ID'
+                if output.get('dialect') and title['dialect'] != output['dialect']:
+                    return 'model catalogue dialect claim is unsupported'
+                if at and not self._available(title, at):
+                    return 'model output references an unavailable catalogue title'
+            if output.get('availability') is False and ids:
+                return 'model availability claim conflicts with catalogue data'
+        elif 'availability' in output:
+            return 'model availability claim has no catalogue reference'
+
+        if 'evidence_refs' in output:
+            refs = output['evidence_refs']
+            if not isinstance(refs, list):
+                return 'model evidence_refs must be a list'
+            trusted = {
+                e.get('event_id'): e
+                for e in self._hist(user_id, at)
+                if user_id and at and e.get('event_id')
+            }
+            for ref in refs:
+                if not isinstance(ref, dict) or set(ref) != {
+                    'event_id', 'event', 'received_at'
+                }:
+                    return 'model evidence reference has an invalid shape'
+                if any(not isinstance(ref[field], str) for field in (
+                    'event_id', 'event', 'received_at'
+                )):
+                    return 'model evidence reference has invalid field types'
+                source = trusted.get(ref['event_id'])
+                if (
+                    not source
+                    or source.get('event') != ref['event']
+                    or source.get('received_at') != ref['received_at']
+                ):
+                    return 'model evidence claim is not supported by trusted events'
+
+        if output['eligible'] and user_id and at:
+            trusted_goal = self._eligible_goal(
+                user_id, at, dialect or output.get('dialect')
+            )
+            if not trusted_goal or trusted_goal['goal_id'] != output['goal_id']:
+                return 'model eligibility claim is not supported by deterministic evidence'
+        return None
+
+    def _validate_model_output(self, output, user_id=None, at=None, dialect=None):
+        """Validate output with trusted replay context; never use this as a schema-only check."""
+        if user_id is None or at is None or dialect is None:
             return False
-        return set(output) <= {'goal_id', 'eligible', 'confidence', 'reason'}
+        # The deterministic rules engine is authoritative; model output is never action input.
+        return self._model_output_error(output, user_id, at, dialect) is None
 
     def _available(self, t, at):
         return (
@@ -883,10 +982,15 @@ class Agent:
                 )
             elif fault:
                 trigger['_failure_reason'] = f"model fault '{fault['fault']}'"
-                if 'model_output' in fault and not self._validate_model_output(
-                    fault['model_output']
-                ):
-                    trigger['_failure_reason'] = 'malformed model output'
+                if 'model_output' in fault:
+                    output_error = self._model_output_error(
+                        fault['model_output'],
+                        obj.get('user_id'),
+                        dt(obj.get('deliver_at')),
+                        obj.get('app_dialect'),
+                    )
+                    if output_error:
+                        trigger['_failure_reason'] = output_error
             self.handle_trigger(trigger)
 
         write_jsonl(os.path.join(self.out, 'decisions.jsonl'), self.decisions)

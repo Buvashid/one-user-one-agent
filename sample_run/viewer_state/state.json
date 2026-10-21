@@ -33,7 +33,7 @@
       "reason": "unfinished episodic title jamo-hasa-d5; last observed play 2026-09-02T07:21:37.382Z; remaining episode evidence=jamo-hasa-d5-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_reason": "stale buffered app_open: event age 449349.121 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "79a179a0-d814-4d57-83b3-9707e746db95",
       "a1077127-a3f1-4113-b98c-adc463422930",
@@ -239,8 +239,17 @@
       "reason": "unfinished episodic title gidha-sudhako-d1; last observed play 2026-09-04T13:39:01.276Z; remaining episode evidence=gidha-sudhako-d1-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "159a42a7-f327-4761-9fde-45b5c271ecf8",
+      "29d32f29-95be-4b75-a58a-78fa798a5a32",
+      "732e9a6b-fb58-460f-8203-950d330ab0e6",
+      "ea7e553e-646f-4baa-824b-1dad880990c3",
+      "ea5ca402-a009-4640-a68b-757b107ec1c6",
+      "f282a077-f61d-4860-9bb9-56fc08642805",
+      "b60d053e-05dc-4572-8aad-93dff1267c8e",
+      "746a4a14-e441-4e9a-956b-eaa34c2aa475"
+    ]
   },
   "U-04888": {
     "user_id": "U-04888",
@@ -276,7 +285,7 @@
       "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-21T17:29:29.790Z; remaining episode evidence=dhapipa-gini-d2-s1e4"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_reason": "stale buffered app_open: event age 753579.169 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "fe6f1d23-7960-425d-b95d-5f62865a2684",
       "d0e88960-a7ac-4f75-8950-0afb93ad283a",
@@ -431,8 +440,17 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "duplicate trigger event_id",
+    "recent_evidence_event_ids": [
+      "2b68af9f-21fd-487d-8fba-3d004a4cb4de",
+      "f5357fd5-314b-464b-9937-d594ce2936c3",
+      "5aadd10f-9c1a-4313-b8f0-846c28e2b506",
+      "b52f74a6-42fe-48dd-822f-8e03a10597e1",
+      "72ff831e-2985-43a8-a008-757c565b0dab",
+      "2ca0af39-e06c-45de-8208-0a05c56c1185",
+      "0e0ceafe-3a8e-4a71-a39c-d8cc3830bd48",
+      "a2c8a5b7-5936-453c-822f-eaf419b25867"
+    ]
   },
   "U-02460": {
     "user_id": "U-02460",
@@ -602,7 +620,7 @@
     "current_dialect": "d4",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-09-30T19:27:42.418Z",
+      "started_at": "2026-10-01T11:44:53.685Z",
       "reason": "unfinished episodic title radi-d4; last observed play 2026-09-10T07:40:28.692Z; remaining episode evidence=radi-d4-s1e1"
     },
     "last_decision": "none",
@@ -1081,7 +1099,7 @@
       "reason": "unfinished episodic title bagugu-gigupi-d1; last observed play 2026-09-14T20:54:21.163Z; remaining episode evidence=bagugu-gigupi-d1-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "17988fde-8105-4a06-b745-5fe1b2cb9c9f",
       "ef888e32-9a8b-4ea2-947d-030ec8f2b124",
@@ -1167,13 +1185,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-09-30T22:19:04.829Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-09-30T22:19:04.829Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 494048.45 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "61be101f-fb47-457e-963d-cb1ed632a0f6",
       "7888e2a7-b5f5-43d1-8a4a-8011bf0711b1",
@@ -1325,7 +1339,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 763972.355 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "01e28137-ef6f-46eb-a554-1336547480b4",
       "95c7c762-68f1-4bc4-9a85-7e1a60df6a2e",
@@ -1342,13 +1356,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-09-30T23:26:49.847Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-09-30T23:26:49.847Z",
-      "reason": "unfinished episodic title yane-tegi-d3; last observed play 2026-09-10T08:20:20.347Z; remaining episode evidence=yane-tegi-d3-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 424200.518 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "4d352f91-0165-4d1b-93f7-e27071d17626",
       "00a7840a-925a-4797-9645-2e7e1a1a6848",
@@ -1641,13 +1651,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T00:16:01.208Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T00:16:01.208Z",
-      "reason": "unfinished episodic title hapibha-d1; last observed play 2026-09-25T04:13:29.422Z; remaining episode evidence=hapibha-d1-s1e5"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 603035.368 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "f7266203-2a73-4b8b-9b74-aadfbc0b5262",
       "15a3cbb3-0548-4fdd-8dad-20b41e869bad",
@@ -1842,7 +1848,7 @@
   "U-03679": {
     "user_id": "U-03679",
     "arm": "holdout",
-    "last_trigger_at": "2026-10-01T00:42:04.249Z",
+    "last_trigger_at": "2026-10-01T00:42:05.405Z",
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
@@ -1850,7 +1856,7 @@
       "reason": "unfinished episodic title patena-d1; last observed play 2026-09-27T14:17:13.025Z; remaining episode evidence=patena-d1-s1e2"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "77e15b85-6aa5-49ae-9678-e4c069d42351",
       "64cf6a15-9c12-4757-82a0-ffa65e91a921",
@@ -1896,7 +1902,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_reason": "stale buffered app_open: event age 488593.61 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "4733ce50-ff4b-4d7b-869d-7ccfde22cecc",
       "afb3f43c-3798-456e-be84-8a03604ae42a",
@@ -2034,7 +2040,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 459266.905 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "f9a56a9d-2c8f-4a28-b7f8-d2a2fa4ee2a4",
       "b469bba5-e8da-4a3a-af38-b535a8296ef3",
@@ -2080,7 +2086,7 @@
       "reason": "unfinished episodic title labha-d1; last observed play 2026-09-02T18:18:21.517Z; remaining episode evidence=labha-d1-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "436e8272-02eb-4604-88ef-b6e338955ae6",
       "b57a329a-ae66-4593-857c-52cef2a6c5e6",
@@ -2172,7 +2178,7 @@
       "reason": "latest profile snapshot says lapsed"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "fb8be009-a9ff-452c-b97d-12d72863bb5c",
       "eae8dd49-eb2b-42d3-b455-db0daf230c2e",
@@ -2191,7 +2197,7 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T01:21:05.571Z",
+      "started_at": "2026-10-01T10:07:41.601Z",
       "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-04T17:18:17.344Z; remaining episode evidence=dhapipa-gini-d2-s1e1"
     },
     "last_decision": "none",
@@ -2281,7 +2287,7 @@
     "current_dialect": "d3",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T01:36:24.867Z",
+      "started_at": "2026-10-01T11:49:32.589Z",
       "reason": "unfinished episodic title yatite-roloda-d3; last observed play 2026-09-12T05:17:19.152Z; remaining episode evidence=yatite-roloda-d3-s1e2"
     },
     "last_decision": "none",
@@ -2584,13 +2590,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T01:50:37.389Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T01:50:37.389Z",
-      "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-27T17:49:24.999Z; remaining episode evidence=dhapipa-gini-d2-s1e2"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 410746.706 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "6613626b-76f5-40c6-a03c-659bee20881b",
       "b2bc65a9-54dd-4f07-ba0d-83a349c79b9b",
@@ -2643,13 +2645,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T01:55:16.273Z",
     "current_dialect": "d6",
-    "active_goal": {
-      "goal_id": "G08",
-      "started_at": "2026-10-01T01:55:16.273Z",
-      "reason": "active subscriber and at least one available title released within prior 30 days"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 516641.97 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "2060447f-aa72-470a-8d86-8b03323526ec",
       "c519cd4c-2901-4e2d-b5a4-15fa46ee9927",
@@ -3496,7 +3494,7 @@
       "reason": "active subscriber and at least one available title released within prior 30 days"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "690c063e-1f8d-4aed-b259-49d9adffafa9",
       "a3dc489e-88ef-4baa-9d34-e16d0e83fd9b",
@@ -4034,7 +4032,7 @@
       "reason": "unfinished episodic title molo-d2; last observed play 2026-09-23T12:16:29.845Z; remaining episode evidence=molo-d2-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 363400.706 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "ba8710ca-ac80-4f7f-be23-6a6817204458",
       "236ef63d-8569-4c3f-9484-6dae655e4a68",
@@ -4164,7 +4162,7 @@
       "reason": "unfinished episodic title guka-kosusa-d2; last observed play 2026-09-23T13:39:21.194Z; remaining episode evidence=guka-kosusa-d2-s1e4"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 353439.314 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "cbd74d1b-77b9-4f55-9310-786323f4b506",
       "39062853-d8fd-41ba-a1f5-95117f1909aa",
@@ -4183,7 +4181,7 @@
     "current_dialect": "d4",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T03:12:27.715Z",
+      "started_at": "2026-10-01T08:24:27.438Z",
       "reason": "unfinished episodic title bagi-baya-d4; last observed play 2026-09-06T15:50:05.122Z; remaining episode evidence=bagi-baya-d4-s1e1"
     },
     "last_decision": "none",
@@ -4371,7 +4369,7 @@
       "reason": "unfinished episodic title lomobha-moni-d3; last observed play 2026-09-13T09:37:39.888Z; remaining episode evidence=lomobha-moni-d3-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "038a8968-0796-461d-8170-ddcc7547f024",
       "02501e35-aefa-4ec0-9fda-82d0ebf2abe6",
@@ -4418,18 +4416,6 @@
       "f6eb2bca-7bb3-4bae-8ffb-86369faa14d4"
     ]
   },
-  "U-02569": {
-    "user_id": "U-02569",
-    "arm": "agent",
-    "last_trigger_at": "2026-10-01T03:25:27.234Z",
-    "current_dialect": "d2",
-    "active_goal": null,
-    "last_decision": "none",
-    "last_reason": "no profile snapshot; insufficient evidence for safe goal eligibility",
-    "recent_evidence_event_ids": [
-      "64ea809f-8c61-4c71-bf4b-d1b1546252b2"
-    ]
-  },
   "U-01562": {
     "user_id": "U-01562",
     "arm": "holdout",
@@ -4441,7 +4427,7 @@
       "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-24T16:48:09.455Z; remaining episode evidence=dhapipa-gini-d2-s1e2"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 760226.52 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "7b9227a0-b59e-47e6-8bca-c336c0f2803b",
       "9040ac96-c5cc-4b51-8d86-33fbcbc52af4",
@@ -4453,18 +4439,26 @@
       "50e9611c-111f-4272-83bf-5b23c96038c8"
     ]
   },
+  "U-02569": {
+    "user_id": "U-02569",
+    "arm": "agent",
+    "last_trigger_at": "2026-10-01T03:25:27.321Z",
+    "current_dialect": "d2",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
+    "recent_evidence_event_ids": [
+      "64ea809f-8c61-4c71-bf4b-d1b1546252b2"
+    ]
+  },
   "U-03928": {
     "user_id": "U-03928",
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T03:26:09.074Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G09",
-      "started_at": "2026-10-01T03:26:00.617Z",
-      "reason": "active subscriber; plays on 1 distinct IST day(s) in last 14 days"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "26482716-f827-45ae-b362-c04f4d1aa9d7",
       "f9fa4410-dc5f-462a-85ef-1787924f2ccd",
@@ -4541,7 +4535,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T03:28:49.540Z",
+      "started_at": "2026-10-01T07:23:13.336Z",
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
@@ -4633,11 +4627,11 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T03:32:44.583Z",
+      "started_at": "2026-10-01T15:29:48.702Z",
       "reason": "unfinished episodic title molo-d2; last observed play 2026-09-22T12:32:23.997Z; remaining episode evidence=molo-d2-s1e2"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "ff0aac46-9c0f-4a0b-806b-c86c6f54eccd",
       "626ea1cc-13b5-43a7-a2bb-69050a401269",
@@ -4902,6 +4896,18 @@
       "e2f39575-3ad3-4b59-b121-94d004819c78"
     ]
   },
+  "U-04411": {
+    "user_id": "U-04411",
+    "arm": "holdout",
+    "last_trigger_at": "2026-10-01T03:41:15.372Z",
+    "current_dialect": "d4",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "randomized holdout: no agent actions permitted",
+    "recent_evidence_event_ids": [
+      "b6b25c5a-09d6-4d71-aaed-ead9051dc886"
+    ]
+  },
   "U-02896": {
     "user_id": "U-02896",
     "arm": "agent",
@@ -4923,18 +4929,6 @@
       "9cc97908-6eff-447f-9d89-312bda0a6cd6",
       "04561e89-c601-4039-bdb8-fcd71a175b4e",
       "7fa414be-b788-4830-bce9-fbba43abc009"
-    ]
-  },
-  "U-04411": {
-    "user_id": "U-04411",
-    "arm": "holdout",
-    "last_trigger_at": "2026-10-01T03:41:15.372Z",
-    "current_dialect": "d4",
-    "active_goal": null,
-    "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
-    "recent_evidence_event_ids": [
-      "b6b25c5a-09d6-4d71-aaed-ead9051dc886"
     ]
   },
   "U-02742": {
@@ -4988,13 +4982,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T03:47:00.673Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T03:47:00.673Z",
-      "reason": "unfinished episodic title rigu-dhadi-d2; last observed play 2026-09-10T16:03:10.610Z; remaining episode evidence=rigu-dhadi-d2-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 720109.054 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "4ba5e6f9-0559-47b2-90e2-f1a2cd7ec9a5",
       "129d386e-b9af-460f-b6a7-c7898864e355",
@@ -5032,7 +5022,7 @@
   "U-00432": {
     "user_id": "U-00432",
     "arm": "agent",
-    "last_trigger_at": "2026-10-01T13:17:07.391Z",
+    "last_trigger_at": "2026-10-01T13:17:07.764Z",
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
@@ -5040,7 +5030,7 @@
       "reason": "unfinished episodic title hapibha-d1; last observed play 2026-09-26T02:04:01.541Z; remaining episode evidence=hapibha-d1-s1e3"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "ed28a42e-980c-4245-8313-b90a920a5840",
       "99f9e596-f0dd-4e2c-a99f-0d8e92c29539",
@@ -5447,7 +5437,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 686893.598 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "6cf681f4-b99b-4eb7-aec9-98e5eebdcf93",
       "e3dc995f-201d-4b14-9fe8-e74b607d9df6",
@@ -5491,7 +5481,7 @@
       "reason": "unfinished episodic title rasuya-moni-d6; last observed play 2026-09-26T18:20:58.717Z; remaining episode evidence=rasuya-moni-d6-s1e3"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_reason": "stale buffered app_open: event age 265501.602 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "590b173a-602a-41f5-84bd-e8e52999eb29",
       "93e99680-7149-42d1-a5a7-948e1ebb2327",
@@ -5818,7 +5808,7 @@
       "reason": "unfinished episodic title yatite-roloda-d3; last observed play 2026-09-23T03:57:06.844Z; remaining episode evidence=yatite-roloda-d3-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_reason": "stale buffered app_open: event age 464113.814 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "c2303df8-7f67-4e6b-9595-e2f9e068deb2",
       "48c7f886-fd4c-4aca-a93e-d991df8a2395",
@@ -5860,7 +5850,7 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "3c33f090-bb60-4f96-9d16-fa14498a36ae"
     ]
@@ -5936,13 +5926,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:26:31.450Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:26:31.450Z",
-      "reason": "unfinished episodic title pibha-tibalo-d5; last observed play 2026-09-26T04:02:25.354Z; remaining episode evidence=pibha-tibalo-d5-s1e2"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 637458.177 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "f287152c-0125-478c-b21f-c06fd9d81e99",
       "3344342c-c6aa-43da-97b2-2659148fad68",
@@ -5961,11 +5947,11 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:27:09.590Z",
+      "started_at": "2026-10-01T05:16:35.456Z",
       "reason": "unfinished episodic title bhaja-moguba-d2; last observed play 2026-09-05T04:32:28.473Z; remaining episode evidence=bhaja-moguba-d2-s1e1"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "6ffec358-ed74-4a6a-a4ec-a8739ceda706",
       "84009059-65ec-4b1d-b47f-cbfccc2c3150",
@@ -6080,7 +6066,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 695202.318 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "c44c56eb-a771-4e24-bc29-8d3203c35c7b",
       "52fd3c67-e72e-406b-9339-2f03520c1385",
@@ -6425,7 +6411,7 @@
       "reason": "active subscriber; plays on 1 distinct IST day(s) in last 14 days"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G09 is still open",
+    "last_reason": "stale buffered app_open: event age 611912.718 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "c82a5925-0dc6-4af9-a384-837a74b0d4ec",
       "1effc329-d92f-454c-86d4-c0480f3a23de",
@@ -6578,13 +6564,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:00.597Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T04:45:00.597Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 626127.303 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "7491c3b3-fc03-485b-beab-f506a6563187",
       "79b51a48-1527-489f-b323-76762292944c",
@@ -6626,7 +6608,7 @@
     "current_dialect": "d3",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:00.677Z",
+      "started_at": "2026-10-01T11:37:24.944Z",
       "reason": "unfinished episodic title pate-kari-d3; last observed play 2026-09-01T08:28:40.286Z; remaining episode evidence=pate-kari-d3-s1e1"
     },
     "last_decision": "none",
@@ -6932,13 +6914,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:07.540Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:07.540Z",
-      "reason": "unfinished episodic title pima-pana-d3; last observed play 2026-09-03T10:20:00.799Z; remaining episode evidence=pima-pana-d3-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 690839.154 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "37de9bf1-0e14-438d-94c9-48161e8df757",
       "b7f7b12a-e831-4417-a441-1098c3c3bd0d",
@@ -6955,13 +6933,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:08.781Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T04:45:08.781Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 477747.652 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "9c191765-a57d-438f-893d-20cbca4c3b5a",
       "3fdd9945-5e2c-41d1-b672-5a9e9d1d9c1c",
@@ -7024,13 +6998,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:10.370Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:10.370Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 312822.318 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "e8b25b29-4e76-4798-9c47-5723dcbdde8c",
       "a8ac13df-21ea-40b6-a70f-5f66f6c80b71",
@@ -7047,13 +7017,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:10.730Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T04:45:10.730Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 358894.549 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "62b38b48-e01d-4e5d-9b0f-c83b6e4f6e7a",
       "593fd1fc-4b17-49f9-a280-62931ba1399c",
@@ -7093,13 +7059,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:13.739Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T04:45:13.739Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 666388.899 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "4d97cc3e-ac27-4f9c-b7c1-8be6159569a1",
       "d3c6f036-22ac-4548-a54b-5da04d87a10b",
@@ -7116,13 +7078,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:14.901Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:14.901Z",
-      "reason": "unfinished episodic title jamo-hasa-d5; last observed play 2026-09-19T16:50:14.302Z; remaining episode evidence=jamo-hasa-d5-s1e2"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 682630.167 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "77b91677-5bda-4581-b35e-3919df80670b",
       "d9eaffb1-fff6-4291-9e98-094b5a9785f3",
@@ -7139,13 +7097,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:15.967Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:15.967Z",
-      "reason": "unfinished episodic title tiko-subava-d4; last observed play 2026-09-07T04:13:56.542Z; remaining episode evidence=tiko-subava-d4-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 634723.008 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "37eea8e4-a487-46fa-9126-891030397e6b",
       "2be1d6b2-74f3-4ca1-bb9c-16d5e64f797f",
@@ -7162,13 +7116,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:17.072Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:17.072Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 763394.42 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "2584c5b8-ba99-40af-b611-c90ee1c93976",
       "1e2621f4-e587-4101-9a9e-a80228b2b52a",
@@ -7185,13 +7135,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:17.394Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G06",
-      "started_at": "2026-10-01T04:45:17.394Z",
-      "reason": "latest profile snapshot says lapsed"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 677345.81 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "74433575-d546-4833-a0a2-1f4f9efcb506",
       "1d393b52-0c0d-4edd-89d0-e816c04afa4e",
@@ -7210,7 +7156,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:17.402Z",
+      "started_at": "2026-10-01T12:56:47.521Z",
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
@@ -7227,13 +7173,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:18.192Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:18.192Z",
-      "reason": "unfinished episodic title lomobha-moni-d3; last observed play 2026-09-22T18:32:12.776Z; remaining episode evidence=lomobha-moni-d3-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 561263.223 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "97663455-af9d-4116-b4b8-9533e24f901e",
       "e214deb9-34b7-4d3e-a9b7-1a115edcbc89",
@@ -7250,13 +7192,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:20.716Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:20.716Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-17T13:08:54.295Z; remaining episode evidence=molo-d2-s1e2"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 569517.925 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "888be02d-35da-44a1-88b3-15262032b4c3",
       "fbeff810-cd79-4125-b6cd-14cb227fa079",
@@ -7298,11 +7236,11 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:21.681Z",
+      "started_at": "2026-10-01T08:26:00.435Z",
       "reason": "no prior episode_completed event in received-event history"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "d0bc7b60-61e7-4717-ae84-81ec1b0faef6",
       "7209f42e-d923-447c-b78f-d76c9ee3c7f7",
@@ -7319,13 +7257,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:23.322Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:23.322Z",
-      "reason": "unfinished episodic title dira-kova-d2; last observed play 2026-09-03T18:45:38.864Z; remaining episode evidence=dira-kova-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 615312.064 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "e757f021-fc8c-443e-8413-614aab7e1d62",
       "cfb90d4f-80e2-42bb-8ace-419d0a567e57",
@@ -7344,11 +7278,11 @@
     "current_dialect": "d3",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:23.689Z",
+      "started_at": "2026-10-01T05:06:41.899Z",
       "reason": "no prior episode_completed event in received-event history"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "532d157f-1c3a-4fba-907c-921f357fc853",
       "54467467-cae5-4733-8a09-b82e023b624a",
@@ -7413,7 +7347,7 @@
     "current_dialect": "d3",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:26.579Z",
+      "started_at": "2026-10-01T14:18:13.201Z",
       "reason": "unfinished episodic title pima-pana-d3; last observed play 2026-09-04T14:39:01.341Z; remaining episode evidence=pima-pana-d3-s1e1"
     },
     "last_decision": "none",
@@ -7434,13 +7368,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:26.945Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:26.945Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 640380.082 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "5d9dc769-226a-47f5-8a78-32b22804e764",
       "4d59ad00-3929-438d-b8b6-d08b3be7e102",
@@ -7457,13 +7387,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:27.091Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:27.091Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 606236.268 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "97feff01-d455-4cbe-861a-6d15b7987e59",
       "f384d302-f1b5-46bd-889a-c4ce28929315",
@@ -7549,13 +7475,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:30.331Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:30.331Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 666312.057 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "57f02e91-77e3-4e16-bb0e-6026f8a0b663",
       "3949ac40-6e16-47c1-8cd0-c40d866f7c81",
@@ -7571,13 +7493,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:31.792Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:31.792Z",
-      "reason": "unfinished episodic title yane-tegi-d3; last observed play 2026-09-02T14:25:44.318Z; remaining episode evidence=yane-tegi-d3-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 627369.759 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "d6222794-c365-4e29-9d99-5f9b292b7bad",
       "a86a2e4c-0873-497b-bd83-a74eb9d8e16a",
@@ -7596,11 +7514,11 @@
     "current_dialect": "d5",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:31.974Z",
+      "started_at": "2026-10-01T16:14:33.697Z",
       "reason": "unfinished episodic title kova-sako-d5; last observed play 2026-09-01T17:53:56.677Z; remaining episode evidence=kova-sako-d5-s1e1"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "3d65226d-23c6-4707-8330-952bed43ee39",
       "e9158ecd-0d33-4a76-aadd-3be3328d3bef",
@@ -7657,13 +7575,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:33.584Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:33.584Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 337371.584 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "e0f45722-3348-4547-af65-55d8772056e6",
       "37d5e755-3c76-4cc3-b13a-161ac9d42172",
@@ -7703,13 +7617,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:37.747Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:37.747Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 386238.499 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "397d6520-4cc8-4458-8c84-57fb7349e67c",
       "14384ed5-95ed-44d7-96e8-464ef3f9de01",
@@ -7726,13 +7636,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:39.435Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:39.435Z",
-      "reason": "unfinished episodic title bagi-baya-d4; last observed play 2026-09-06T11:47:56.438Z; remaining episode evidence=bagi-baya-d4-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 345536.704 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "e9685c5b-4199-4e0c-bf8c-af0ab45a9d63",
       "73a18a01-4fa7-46a1-89f8-d87b0f29e68f",
@@ -7789,13 +7695,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:41.866Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:41.866Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 705892.663 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "32b9d1b2-c9b4-40f8-8837-6c36e3f09909",
       "b2cddfe1-8f86-46e3-81db-6d690d66ec19",
@@ -7833,13 +7735,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:42.764Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:42.764Z",
-      "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-27T11:25:51.028Z; remaining episode evidence=dhapipa-gini-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 576171.835 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "3d7f5fb4-9004-4cfb-b23a-6b00afdcea84",
       "01511dd3-ec71-445e-99e3-777fc39593bf",
@@ -7948,13 +7846,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:45.555Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:45.555Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-17T05:48:03.790Z; remaining episode evidence=molo-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 694588.484 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "5725a214-5234-41b0-9713-ca937838f99f",
       "00c29955-ab2f-40b5-b853-7a92408612ab",
@@ -7988,7 +7882,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G08",
-      "started_at": "2026-10-01T04:45:47.992Z",
+      "started_at": "2026-10-01T18:12:36.891Z",
       "reason": "active subscriber and at least one available title released within prior 30 days"
     },
     "last_decision": "none",
@@ -8009,13 +7903,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:48.136Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:48.136Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 283508.34 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "1dd936d5-2a68-4345-b2bb-262fe0c2ff22",
       "0fb04090-8f41-4223-be89-dac4fa13aa98",
@@ -8074,13 +7964,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:50.810Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:50.810Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 376269.595 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "32d3ff2a-bf2e-4632-b61f-d67eb098f7f0",
       "5b7ab7f2-107f-4204-a2cf-70ca55c58538",
@@ -8096,13 +7982,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:53.069Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:45:53.069Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 727507.14 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "670c1cad-aa1b-4d4c-b2a4-007270424632",
       "c894f603-8d12-42cd-a4bb-7988835cdfb2",
@@ -8116,13 +7998,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:45:53.184Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:53.184Z",
-      "reason": "unfinished episodic title kova-sako-d5; last observed play 2026-09-01T03:08:50.810Z; remaining episode evidence=kova-sako-d5-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 423685.693 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "d2e4ba8c-a6c2-4caf-8b88-8df2dd76e10d",
       "693db05f-e08a-4e20-99aa-fe48bbe7e01e",
@@ -8185,13 +8063,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:45:57.783Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:45:57.783Z",
-      "reason": "unfinished episodic title bagugu-gigupi-d1; last observed play 2026-09-08T14:09:55.446Z; remaining episode evidence=bagugu-gigupi-d1-s1e2"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 679085.069 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "b2f35dbb-6797-4bb2-8d34-7b0d587bc1e6",
       "2334aebb-a613-47d2-9649-2d0c3f8e3b98",
@@ -8210,7 +8084,7 @@
     "current_dialect": null,
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 645667.018 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "ec3f2191-f5d3-4b7e-b1fd-bbf324465447",
       "1e355123-b670-4faa-9a7e-cf282aeda8dc",
@@ -8253,7 +8127,16 @@
     "active_goal": null,
     "last_decision": "none",
     "last_reason": "model fault 'unsupported_claim'; deterministic fallback fails closed",
-    "recent_evidence_event_ids": []
+    "recent_evidence_event_ids": [
+      "070b0a3e-13aa-4b8b-a0de-83966f7ed7cc",
+      "f42cb88e-d6e1-4b03-b9f7-b0ee5119c027",
+      "bc08b90f-5e9f-448b-a8bd-d455f8ae967d",
+      "a772c2cc-09f2-468f-88ad-148245b8a867",
+      "62930ff7-86b9-4e76-afc7-64f066bd0e68",
+      "148cb60b-07d2-4343-b67c-ae618ab6c92d",
+      "4bbd394b-2ea5-4cad-b673-10383bddebca",
+      "bfc5bd2e-3827-403d-b2a6-c1f983bcad05"
+    ]
   },
   "U-01691": {
     "user_id": "U-01691",
@@ -8278,13 +8161,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:00.355Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:00.355Z",
-      "reason": "unfinished episodic title guka-kosusa-d2; last observed play 2026-09-13T08:00:33.267Z; remaining episode evidence=guka-kosusa-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 732662.026 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "247fde8c-bead-47cc-9f0b-c96cab9bcdaf",
       "c87ff8a1-2b30-454d-a259-00274d68a421",
@@ -8338,13 +8217,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:03.340Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:03.340Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 275290.452 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "dada628c-d810-4831-9a46-d242e430cc04",
       "342496f0-7527-4126-bd9d-54e452efcafb"
@@ -8439,11 +8314,11 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:05.464Z",
+      "started_at": "2026-10-01T07:03:09.163Z",
       "reason": "unfinished episodic title hapibha-d1; last observed play 2026-09-21T21:33:51.981Z; remaining episode evidence=hapibha-d1-s1e1"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "0edfe4b9-b984-4bd4-9bcd-405e9e9835c5",
       "838de5a7-6002-45a9-a502-6a80ef54b723",
@@ -8483,13 +8358,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:06.248Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:06.248Z",
-      "reason": "unfinished episodic title guka-kosusa-d2; last observed play 2026-09-22T22:40:44.212Z; remaining episode evidence=guka-kosusa-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 517477.431 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "5ec66918-e542-4a66-b111-c13b0fb941b0",
       "25345441-a204-4168-8df6-1abd97ec9ef6",
@@ -8546,13 +8417,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:07.659Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:07.659Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 750564.416 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "3c69202f-72c9-484d-a58f-7b7f2ef14bba",
       "be7a4610-5386-4698-a571-6b37a1dc2e58",
@@ -8638,13 +8505,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:09.366Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:09.366Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 725475.972 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "de675280-09e1-4cf0-aeb7-017c163c0f60",
       "6b2233a8-49da-4f59-92c8-efe0fad04b13",
@@ -8705,7 +8568,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:12.327Z",
+      "started_at": "2026-10-01T06:14:21.003Z",
       "reason": "unfinished episodic title gima-bhadaba-d1; last observed play 2026-09-06T01:57:01.799Z; remaining episode evidence=gima-bhadaba-d1-s1e1"
     },
     "last_decision": "none",
@@ -8726,13 +8589,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:14.906Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:14.906Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-08T07:17:58.280Z; remaining episode evidence=molo-d2-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 665973.486 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "d35f0e4f-b168-475f-8057-749279a081b3",
       "2ff8f654-3a39-4e67-af2f-a0990f5f7c78",
@@ -8749,13 +8608,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:18.162Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:18.162Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 566133.601 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "49f2fd35-9304-4961-a4e0-ec4005a4d333",
       "a5f472a2-6df0-4c11-9b82-3cd16698ae12",
@@ -8850,13 +8705,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:24.961Z",
     "current_dialect": "d7",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T04:46:24.961Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 423806.704 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "50514083-c275-4f26-a65f-ec53290189c5",
       "7c1f9f9a-a910-4dfb-b77b-5401b896a21a",
@@ -8896,13 +8747,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:25.485Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:25.485Z",
-      "reason": "unfinished episodic title rigu-dhadi-d2; last observed play 2026-09-26T10:07:53.231Z; remaining episode evidence=rigu-dhadi-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 263622.75 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "1d35364e-d126-4297-872f-31a538065ba1",
       "679f101c-af42-4be5-9232-4ff9d079a1c1",
@@ -8919,13 +8766,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:25.863Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G06",
-      "started_at": "2026-10-01T04:46:25.863Z",
-      "reason": "latest profile snapshot says lapsed"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 597922.365 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "f8455415-2a6f-4826-9a02-dc36f646bef5",
       "8b80e454-1e81-4539-a781-ac2dceb69cda",
@@ -9006,13 +8849,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:29.729Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:29.729Z",
-      "reason": "unfinished episodic title rigu-dhadi-d2; last observed play 2026-09-19T07:23:51.405Z; remaining episode evidence=rigu-dhadi-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 312717.884 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "b9333c89-32be-4338-890b-592291a09e8a",
       "1f820d67-d66c-4b51-8a5c-6b106e8cc401",
@@ -9029,13 +8868,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:30.069Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T04:46:30.069Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 444906.41 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "100cb8a6-0f98-4c9a-98d3-e311587d9fb9",
       "81f50470-2a83-4f3b-93d4-cff63998cd95",
@@ -9052,13 +8887,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:30.124Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G08",
-      "started_at": "2026-10-01T04:46:30.124Z",
-      "reason": "active subscriber and at least one available title released within prior 30 days"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 624866.457 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "b3c3a5d3-34f6-4745-a557-b6e3ea38343a",
       "a088af08-e2d1-4905-9dc8-0fed062f5f92",
@@ -9075,13 +8906,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:31.548Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:31.548Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 594578.68 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "2c8ae488-b650-4162-b314-52df8f6293c3",
       "b3d63196-4bae-4727-a781-69ab3191c49d",
@@ -9123,7 +8950,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:32.187Z",
+      "started_at": "2026-10-01T15:46:34.049Z",
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
@@ -9196,7 +9023,7 @@
       "reason": "unfinished episodic title bagi-baya-d4; last observed play 2026-09-13T11:21:37.226Z; remaining episode evidence=bagi-baya-d4-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "3fa7dcae-1ef9-46bc-abb5-761ffffa74c7",
       "909874a2-17d7-49c5-a215-4bfd2e334b5a",
@@ -9213,13 +9040,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:36.486Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:36.486Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-22T17:22:48.768Z; remaining episode evidence=molo-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 503432.693 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "b8648fe4-dae0-4d09-ad9e-431814b73dd2",
       "7927451b-3988-479a-b2e3-cae54274ec75",
@@ -9259,13 +9082,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:36.879Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:36.879Z",
-      "reason": "unfinished episodic title hama-chudibha-d1; last observed play 2026-09-02T16:42:23.331Z; remaining episode evidence=hama-chudibha-d1-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 460912.353 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "205af8ac-2b63-416a-b4b8-ca8bbeb7ec4f",
       "d58e82af-e63d-48a3-a9f4-3e13e09a3e26",
@@ -9328,13 +9147,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:38.252Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:38.252Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-26T11:10:11.091Z; remaining episode evidence=molo-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 622013.277 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "19bb543d-af3a-412a-9aac-03c6de5cbd52",
       "d38f19b6-1af1-4e70-8300-6f5b7bed48aa",
@@ -9535,13 +9350,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:50.010Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:50.010Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-23T15:54:32.675Z; remaining episode evidence=molo-d2-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 408729.501 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "3e0eeb18-c8da-43c5-a458-6a956f870cfb",
       "c6639761-0e07-402e-8c81-be5f4852e6ac",
@@ -9583,7 +9394,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:46:50.583Z",
+      "started_at": "2026-10-01T12:40:13.048Z",
       "reason": "unfinished episodic title hama-chudibha-d1; last observed play 2026-09-23T05:39:33.658Z; remaining episode evidence=hama-chudibha-d1-s1e3"
     },
     "last_decision": "none",
@@ -9627,7 +9438,7 @@
     "current_dialect": "d6",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:51.328Z",
+      "started_at": "2026-10-01T05:27:11.610Z",
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
@@ -9671,13 +9482,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:46:52.269Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:52.269Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 510442.921 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "a03775b0-01c6-42cb-89ab-7defe8766d5d"
     ]
@@ -9775,13 +9582,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:46:58.064Z",
     "current_dialect": "d7",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:46:58.064Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "no available catalogue title in current app dialect",
+    "last_reason": "stale buffered app_open: event age 724318.434 seconds; no foreground action",
     "recent_evidence_event_ids": []
   },
   "U-02580": {
@@ -9791,7 +9594,7 @@
     "current_dialect": null,
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "trigger has no current app_dialect",
+    "last_reason": "stale buffered app_open: event age 399877.935 seconds; no foreground action",
     "recent_evidence_event_ids": []
   },
   "U-01613": {
@@ -9851,8 +9654,17 @@
       "reason": "active subscriber and at least one available title released within prior 30 days"
     },
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "13173299-12fd-4c95-a719-0696328ea05b",
+      "6b044ee9-40ca-4e11-be98-51f0a280d828",
+      "c9c6f4a7-3b07-4286-979b-6aa013549e01",
+      "62ccc817-6076-4fd1-a9fb-71906b38d36e",
+      "19b1d9e2-f17e-444b-9bf2-81f075489c63",
+      "c0f588a1-508a-4e1d-842c-d40d589d5a70",
+      "02fab7b8-df90-4cd4-a166-da3083da0849",
+      "c9a4ffb1-ae79-48c4-ae97-53a064fd274f"
+    ]
   },
   "U-02670": {
     "user_id": "U-02670",
@@ -9896,13 +9708,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:47:09.348Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:09.348Z",
-      "reason": "unfinished episodic title yane-tegi-d3; last observed play 2026-09-04T14:35:18.261Z; remaining episode evidence=yane-tegi-d3-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 733199.766 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "4a59db4f-55ac-449c-a38c-e8d670e5919f",
       "1ec78b84-8240-476d-8e01-fadc6c8fe1c0",
@@ -10110,13 +9918,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:47:19.793Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:47:19.793Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 572600.149 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "563dd532-2798-49c8-b85a-7dc9fe5daeff",
       "0ea4d7d3-2057-449c-ae50-c7ad55c3525c",
@@ -10133,13 +9937,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:47:20.840Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:20.840Z",
-      "reason": "unfinished episodic title tidha-dakachu-d1; last observed play 2026-09-14T14:26:33.779Z; remaining episode evidence=tidha-dakachu-d1-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 710413.724 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "67986858-3244-42da-b352-fc2d2c8022d5",
       "eeb2b4da-95a0-4b68-83b6-8658d7948c9f",
@@ -10179,13 +9979,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:47:22.260Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G06",
-      "started_at": "2026-10-01T04:47:22.260Z",
-      "reason": "latest profile snapshot says lapsed"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 491058.896 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "dfc06229-2b59-467e-acc6-93aab7b540ff",
       "f07e52b9-3497-457a-8d2f-4509b7dfba92",
@@ -10248,13 +10044,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:47:25.365Z",
     "current_dialect": "d6",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:25.365Z",
-      "reason": "unfinished episodic title chupi-gugi-d6; last observed play 2026-09-12T18:09:11.306Z; remaining episode evidence=chupi-gugi-d6-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 377794.476 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "a5acd97d-3757-4457-94e0-8d488abdfe3d",
       "1854c09a-1697-4121-95d7-c16d613aba33",
@@ -10295,9 +10087,9 @@
     "last_trigger_at": "2026-10-01T11:54:29.657Z",
     "current_dialect": "d2",
     "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T04:47:28.566Z",
-      "reason": "profile says never; no observed non-trial purchase event"
+      "goal_id": "G07",
+      "started_at": "2026-10-01T11:54:29.657Z",
+      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-28T07:24:59.503Z; remaining episode evidence=molo-d2-s1e2"
     },
     "last_decision": "none",
     "last_reason": "randomized holdout: no agent actions permitted",
@@ -10392,21 +10184,26 @@
       "reason": "unfinished episodic title molo-d2; last observed play 2026-09-20T16:29:32.637Z; remaining episode evidence=molo-d2-s1e2"
     },
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "427a9c48-acb4-4377-be8c-3d801d06591d",
+      "b02ef133-bb79-4c35-aa0d-0e556645937c",
+      "a1364237-f883-4b15-94e8-9eb242a9d308",
+      "b6fd8ba8-905c-4b82-a63b-59cc57bac85a",
+      "7b223421-c766-4c8c-8e03-00712812f1cc",
+      "90c80c62-d59b-4a9e-a71f-57df025202ca",
+      "d3c0c3bf-cb54-4285-bbdb-06d8df8ec4ba",
+      "e4c30274-372c-4fbf-9bda-d3264200d148"
+    ]
   },
   "U-00439": {
     "user_id": "U-00439",
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:47:31.712Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:31.712Z",
-      "reason": "unfinished episodic title gima-bhadaba-d1; last observed play 2026-09-13T04:25:07.894Z; remaining episode evidence=gima-bhadaba-d1-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 296374.937 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "577bc569-3679-4054-89f3-3710bd3b723d",
       "f53ff0a9-3366-4b10-9384-9e6467161d2e",
@@ -10452,7 +10249,7 @@
       "reason": "unfinished episodic title jamo-hasa-d5; last observed play 2026-09-27T11:09:25.983Z; remaining episode evidence=jamo-hasa-d5-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "078ee60b-21a9-4b6b-b0f7-b571ca2346bd",
       "b560dff4-a44c-4162-af6d-8df436f3cd21",
@@ -10469,13 +10266,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:47:33.414Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:47:33.414Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 655782.869 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "79274fbe-37c4-42c4-a039-dc728604e913",
       "71923cc3-d34e-479f-9e5a-50ec22585809",
@@ -10508,13 +10301,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:47:35.688Z",
     "current_dialect": "d6",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:47:35.688Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 708708.76 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "7df1c064-5fe4-4cf0-b896-7ee55f5e45fc",
       "1c3d3818-c816-4caa-a29d-1d20ec407f15",
@@ -10554,13 +10343,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:47:37.888Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:37.888Z",
-      "reason": "unfinished episodic title haja-d3; last observed play 2026-09-05T12:25:23.705Z; remaining episode evidence=haja-d3-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 381120.745 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "50a93deb-1569-40c9-98cc-79142f77e9ee",
       "58d3fc97-a519-46d7-b24e-21a2607cb942",
@@ -10623,13 +10408,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T04:47:40.584Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:40.584Z",
-      "reason": "unfinished episodic title hama-chudibha-d1; last observed play 2026-09-18T21:44:51.366Z; remaining episode evidence=hama-chudibha-d1-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 274332.121 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "13b2c4e6-db4f-4e9f-be57-9666b1236855",
       "5c759e20-71fe-40c1-9ba1-577fc5ea60ca",
@@ -10701,7 +10482,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:47:42.970Z",
+      "started_at": "2026-10-01T06:10:56.753Z",
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
@@ -10768,13 +10549,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:47:45.808Z",
     "current_dialect": "d6",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:45.808Z",
-      "reason": "unfinished episodic title rasuya-moni-d6; last observed play 2026-09-08T04:05:20.329Z; remaining episode evidence=rasuya-moni-d6-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 653753.988 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "f88949ae-4f21-4dd3-833c-1eee2ffc7e45",
       "283a49ef-f10e-438b-a9e7-223bbc668094",
@@ -10908,7 +10685,7 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:51.247Z",
+      "started_at": "2026-10-01T18:12:42.475Z",
       "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-17T16:08:26.928Z; remaining episode evidence=dhapipa-gini-d2-s1e1"
     },
     "last_decision": "none",
@@ -10975,7 +10752,7 @@
     "current_dialect": "d5",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:47:54.421Z",
+      "started_at": "2026-10-01T08:26:04.586Z",
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
@@ -11090,11 +10867,11 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T04:47:55.536Z",
+      "started_at": "2026-10-01T05:50:53.347Z",
       "reason": "no prior episode_completed event in received-event history"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "69a61a4d-91d6-4df9-b920-9b965fa22e5e",
       "134ed4c1-172c-4f82-99d2-71c1b7ea98f9",
@@ -11113,7 +10890,7 @@
     "current_dialect": "d3",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T04:47:56.012Z",
+      "started_at": "2026-10-01T15:02:30.477Z",
       "reason": "unfinished episodic title yatite-roloda-d3; last observed play 2026-09-23T14:37:06.088Z; remaining episode evidence=yatite-roloda-d3-s1e1"
     },
     "last_decision": "none",
@@ -11157,13 +10934,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T04:47:58.007Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T04:47:58.007Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 663244.059 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "2dad7f53-3c6e-4194-b3d2-57c94b5d8dc4",
       "595aa552-ec12-4653-a5a5-f9cf7645b4e9",
@@ -11186,7 +10959,7 @@
       "reason": "unfinished episodic title yane-tegi-d3; last observed play 2026-09-17T16:32:48.811Z; remaining episode evidence=yane-tegi-d3-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "7532a958-b853-4f32-b415-88acf37a1814",
       "2230f24f-c21c-46cb-8db2-e1d66892268a",
@@ -11359,11 +11132,11 @@
   "U-01832": {
     "user_id": "U-01832",
     "arm": "agent",
-    "last_trigger_at": "2026-10-01T04:56:45.713Z",
+    "last_trigger_at": "2026-10-01T04:58:18.900Z",
     "current_dialect": "d3",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "no profile snapshot; insufficient evidence for safe goal eligibility",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "e5dbda5e-485e-4ec8-baf4-4c0655a551d5"
     ]
@@ -11460,13 +11233,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T05:02:33.087Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T05:02:33.087Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 455602.608 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "dab3044a-215f-45fe-8afd-b362c2ac46e4",
       "0ad3af9d-bed4-42bd-ae15-ba11e0ac7e54",
@@ -11987,8 +11756,17 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "8caf183a-8a1b-45d9-98d5-aa3e6e679636",
+      "c51cf949-d6aa-4b94-957c-ff1e180427e5",
+      "0fb8910b-d6e2-4023-a52c-e54638a8b962",
+      "3bff61fa-dff1-42d1-9e89-efae7f5d3736",
+      "5da66890-7427-4960-b9c9-31e77123fbcb",
+      "1550c5df-47df-4e83-bdbd-f28f223303e2",
+      "5742d4ec-b6d6-48a2-b3e2-e9c0bc72fe26",
+      "0f5e2720-0432-43b5-9ef9-ef833c0aa4dc"
+    ]
   },
   "U-04785": {
     "user_id": "U-04785",
@@ -12166,13 +11944,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T05:25:47.075Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T05:25:47.075Z",
-      "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-22T15:53:21.956Z; remaining episode evidence=dhapipa-gini-d2-s1e6"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 469320.867 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "a7ce66e6-3b7e-47a4-99d2-7b65e3f5e972",
       "4393446e-2468-40e7-94eb-82b9ec50076a",
@@ -12445,7 +12219,7 @@
   "U-00983": {
     "user_id": "U-00983",
     "arm": "holdout",
-    "last_trigger_at": "2026-10-01T05:32:18.132Z",
+    "last_trigger_at": "2026-10-01T05:38:57.532Z",
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
@@ -12453,7 +12227,7 @@
       "reason": "unfinished episodic title hama-chudibha-d1; last observed play 2026-09-08T18:07:54.322Z; remaining episode evidence=hama-chudibha-d1-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "63295d7e-d86c-4536-9f0f-3bc988a2acc3",
       "06eb71d5-8f9c-4524-ae07-d42d489de136",
@@ -12708,13 +12482,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T05:41:12.735Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T05:41:12.735Z",
-      "reason": "unfinished episodic title hapibha-d1; last observed play 2026-09-13T15:18:21.276Z; remaining episode evidence=hapibha-d1-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 562730.564 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "858273bf-f007-464f-a7f1-b18659d791e5",
       "208f227b-de61-4f4e-b7ba-1bb206ac2462",
@@ -13069,7 +12839,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T05:50:33.952Z",
+      "started_at": "2026-10-01T15:44:52.984Z",
       "reason": "unfinished episodic title bagugu-gigupi-d1; last observed play 2026-09-18T19:48:06.460Z; remaining episode evidence=bagugu-gigupi-d1-s1e1"
     },
     "last_decision": "none",
@@ -13347,7 +13117,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 695529.476 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "3cbe03ca-39bc-44df-8900-4eae8924df1f",
       "07f61eb6-c225-4112-a3f4-306f98b9796a",
@@ -13554,7 +13324,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "dc7132af-7470-4c9c-aedf-f2a8b4dacf66",
       "91f3a1cc-3c30-4338-b7c5-a5d86886c0e0",
@@ -14431,6 +14201,18 @@
       "00b09bc1-2e4f-4b68-9e1c-5e85037cf4c2"
     ]
   },
+  "U-02102": {
+    "user_id": "U-02102",
+    "arm": "holdout",
+    "last_trigger_at": "2026-10-01T06:32:15.405Z",
+    "current_dialect": "d3",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "randomized holdout: no agent actions permitted",
+    "recent_evidence_event_ids": [
+      "12b38020-df34-4827-a991-c607c2895533"
+    ]
+  },
   "U-02844": {
     "user_id": "U-02844",
     "arm": "agent",
@@ -14452,18 +14234,6 @@
       "3d199e76-c550-4272-a452-46f18fe23b9b",
       "e863f8e7-0e94-4a82-a029-a5d7a469eb83",
       "72671bd3-917e-4c48-93f6-37ab8ebed175"
-    ]
-  },
-  "U-02102": {
-    "user_id": "U-02102",
-    "arm": "holdout",
-    "last_trigger_at": "2026-10-01T06:32:15.405Z",
-    "current_dialect": "d3",
-    "active_goal": null,
-    "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
-    "recent_evidence_event_ids": [
-      "12b38020-df34-4827-a991-c607c2895533"
     ]
   },
   "U-04404": {
@@ -14662,13 +14432,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T06:39:35.733Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T06:39:35.733Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 699977.473 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "a89dbd08-e371-47bb-8e10-8edff6da57b0",
       "3d85bed5-c530-4fae-99a3-6ddc340a9f53",
@@ -14779,7 +14545,7 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T06:42:44.632Z",
+      "started_at": "2026-10-01T11:13:16.605Z",
       "reason": "unfinished episodic title guka-kosusa-d2; last observed play 2026-09-20T14:24:45.369Z; remaining episode evidence=guka-kosusa-d2-s1e1"
     },
     "last_decision": "none",
@@ -15312,7 +15078,7 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T07:03:44.442Z",
+      "started_at": "2026-10-01T15:04:42.395Z",
       "reason": "unfinished episodic title rigu-dhadi-d2; last observed play 2026-09-09T15:34:51.269Z; remaining episode evidence=rigu-dhadi-d2-s1e1"
     },
     "last_decision": "none",
@@ -15335,7 +15101,7 @@
     "current_dialect": null,
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "788b9a84-480f-46a1-8db5-a51dd7411237",
       "a15db4bb-68c9-463d-9341-6a6bbaa2625d",
@@ -15404,7 +15170,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_reason": "stale buffered app_open: event age 460936.189 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "f8dc41a6-d1a4-4951-ae26-a0743cbd74bd",
       "545dbcfe-6bd1-4922-ba49-79be3d152a34",
@@ -15721,7 +15487,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "ae72f39c-5cfe-4857-98e6-9d8302298799",
       "942e7e19-d3da-43ec-b78d-c7a5bb02e2d0",
@@ -15826,7 +15592,7 @@
       "reason": "unfinished episodic title guka-kosusa-d2; last observed play 2026-09-27T17:20:47.211Z; remaining episode evidence=guka-kosusa-d2-s1e4"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "6daaae29-1703-4d19-8568-583de73760fc",
       "597b38e5-45ab-46d7-8336-9e835f5208ca",
@@ -16210,7 +15976,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "3902c01a-1fc9-48be-9726-9c70a3f7b4b1",
       "7bfceb02-ad52-4f79-9605-aa347cb8f12d",
@@ -16660,13 +16426,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T10:52:40.910Z",
     "current_dialect": "d6",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T07:42:18.646Z",
-      "reason": "unfinished episodic title losubha-rima-d6; last observed play 2026-09-26T01:40:29.622Z; remaining episode evidence=losubha-rima-d6-s1e3"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 671800.202 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "dcdf68fa-40fd-4adc-96ca-b02435af9f24",
       "d2309061-567b-4750-aa54-b7fda532917d",
@@ -16754,11 +16516,11 @@
     "current_dialect": "d4",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T07:44:41.356Z",
+      "started_at": "2026-10-01T11:51:01.472Z",
       "reason": "no prior episode_completed event in received-event history"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "54290d61-59d3-4aeb-9fe5-7ed8e2c6a835",
       "98665d7a-1eea-424a-b64e-2f669c8141cf",
@@ -16937,13 +16699,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T07:48:59.321Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T07:48:59.321Z",
-      "reason": "unfinished episodic title dhada-bhate-d1; last observed play 2026-09-04T16:24:29.227Z; remaining episode evidence=dhada-bhate-d1-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 389691.422 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "e7aa9a19-3310-446d-b31c-5380b3b03806",
       "6b4b5383-9f55-459f-bf23-0921888b376c",
@@ -17277,7 +17035,7 @@
       "reason": "unfinished episodic title lomobha-moni-d3; last observed play 2026-09-04T20:49:00.638Z; remaining episode evidence=lomobha-moni-d3-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "d9d0be18-a534-4e40-8e12-2dba48585a14",
       "c63bf9e1-0b68-4bfa-a22d-8d24acad1b0f",
@@ -17455,13 +17213,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T08:07:20.615Z",
     "current_dialect": "d6",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T08:07:20.615Z",
-      "reason": "unfinished episodic title rasuya-moni-d6; last observed play 2026-09-22T08:54:27.823Z; remaining episode evidence=rasuya-moni-d6-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 397777.72 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "41a31d50-88c5-407a-bd9f-5fa9f26656a2",
       "e1ca01fb-df2b-4849-af1b-c0660fef7772",
@@ -17530,7 +17284,7 @@
       "reason": "profile says never; no observed non-trial purchase event"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "f2e91b74-34f5-4882-97a5-8cd9b73ae0d0",
       "8d34db52-3b20-47ac-8732-7c3acaaa0325",
@@ -17549,7 +17303,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G05",
-      "started_at": "2026-10-01T08:10:03.294Z",
+      "started_at": "2026-10-01T15:09:28.675Z",
       "reason": "profile says never; no observed non-trial purchase event"
     },
     "last_decision": "none",
@@ -17632,7 +17386,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 707728.295 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "48f421da-83a0-4fa5-998d-34f7cc422bd9",
       "94ed53bc-cef2-4bdc-8238-468f0a5cad5e",
@@ -18520,13 +18274,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T15:57:27.579Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T08:40:44.063Z",
-      "reason": "unfinished episodic title guka-kosusa-d2; last observed play 2026-09-24T14:11:36.514Z; remaining episode evidence=guka-kosusa-d2-s1e4"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 607381.939 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "c8cfbbe2-c265-4818-9746-182eb4d6f527",
       "27d83399-e79f-416e-9943-21bdd38b6afd",
@@ -18545,7 +18295,7 @@
     "current_dialect": "d3",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T08:41:24.342Z",
+      "started_at": "2026-10-01T16:23:26.413Z",
       "reason": "unfinished episodic title yatite-roloda-d3; last observed play 2026-09-14T13:10:03.459Z; remaining episode evidence=yatite-roloda-d3-s1e2"
     },
     "last_decision": "none",
@@ -18633,7 +18383,7 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T08:45:25.752Z",
+      "started_at": "2026-10-01T13:47:29.893Z",
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
@@ -19017,7 +18767,7 @@
     "current_dialect": "d3",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T08:59:19.300Z",
+      "started_at": "2026-10-01T16:07:15.343Z",
       "reason": "unfinished episodic title yane-tegi-d3; last observed play 2026-09-27T06:19:30.281Z; remaining episode evidence=yane-tegi-d3-s1e3"
     },
     "last_decision": "none",
@@ -19079,29 +18829,6 @@
       "af3bd99a-baac-46f8-b343-a10a7f2bf315"
     ]
   },
-  "U-04289": {
-    "user_id": "U-04289",
-    "arm": "agent",
-    "last_trigger_at": "2026-10-01T09:02:15.758Z",
-    "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T09:02:15.758Z",
-      "reason": "unfinished episodic title tidha-dakachu-d1; last observed play 2026-09-18T04:00:04.714Z; remaining episode evidence=tidha-dakachu-d1-s1e2"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
-    "recent_evidence_event_ids": [
-      "6c24f247-0bb5-4cd0-a8a7-8622457a44e6",
-      "de345d20-7b0d-469d-8cdd-d7892d3309a0",
-      "e7e7b9e1-4ad7-4a4c-ac8a-85f7b7ca03fa",
-      "af640b60-2f01-4fc7-93c0-a5957787a5b6",
-      "a4b5814e-f84a-45c3-9c33-b75ab2ec46d5",
-      "8bb736ee-0abb-40cb-b088-45f0b26fd8aa",
-      "72036ae2-9b83-448c-aa3d-89be9fe08729",
-      "b0a379da-f02f-4430-81e4-bad793573a9c"
-    ]
-  },
   "U-01597": {
     "user_id": "U-01597",
     "arm": "holdout",
@@ -19123,6 +18850,29 @@
       "cf5888c1-b0e8-44e1-97e8-d2c7b8449583",
       "bbe0959d-5586-4810-908c-18551c8de1d3",
       "e39a7682-690f-4842-a452-b3aed1abf8e5"
+    ]
+  },
+  "U-04289": {
+    "user_id": "U-04289",
+    "arm": "agent",
+    "last_trigger_at": "2026-10-01T09:02:15.758Z",
+    "current_dialect": "d1",
+    "active_goal": {
+      "goal_id": "G07",
+      "started_at": "2026-10-01T09:02:15.758Z",
+      "reason": "unfinished episodic title tidha-dakachu-d1; last observed play 2026-09-18T04:00:04.714Z; remaining episode evidence=tidha-dakachu-d1-s1e2"
+    },
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "recent_evidence_event_ids": [
+      "6c24f247-0bb5-4cd0-a8a7-8622457a44e6",
+      "de345d20-7b0d-469d-8cdd-d7892d3309a0",
+      "e7e7b9e1-4ad7-4a4c-ac8a-85f7b7ca03fa",
+      "af640b60-2f01-4fc7-93c0-a5957787a5b6",
+      "a4b5814e-f84a-45c3-9c33-b75ab2ec46d5",
+      "8bb736ee-0abb-40cb-b088-45f0b26fd8aa",
+      "72036ae2-9b83-448c-aa3d-89be9fe08729",
+      "b0a379da-f02f-4430-81e4-bad793573a9c"
     ]
   },
   "U-01903": {
@@ -19390,29 +19140,6 @@
       "b9f8901b-f28d-4f48-b259-047f9045bf50"
     ]
   },
-  "U-00500": {
-    "user_id": "U-00500",
-    "arm": "holdout",
-    "last_trigger_at": "2026-10-01T09:08:01.492Z",
-    "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T09:08:01.492Z",
-      "reason": "unfinished episodic title gune-halo-d1; last observed play 2026-09-24T17:05:08.729Z; remaining episode evidence=gune-halo-d1-s1e2"
-    },
-    "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
-    "recent_evidence_event_ids": [
-      "d1fc0b1a-a261-486e-9dfc-04d81fa59c5b",
-      "b6494303-431b-4de3-ae95-d33de71420ee",
-      "f34c3f2b-582c-452b-b05c-170503d626e4",
-      "55021b09-6da2-4bde-8553-1ef063bcbdbc",
-      "c4fecb95-98b1-4787-bebb-abfb78d6a096",
-      "c2f3672d-bd85-4539-b8b0-9cb2c2ea09c3",
-      "ef84d1e5-7526-4a16-b2a2-e565e848dd71",
-      "20ebc8c5-a65f-4f38-9cfc-5263a0ceb44c"
-    ]
-  },
   "U-01270": {
     "user_id": "U-01270",
     "arm": "agent",
@@ -19434,6 +19161,29 @@
       "79924412-7076-4af9-8491-c7a368aad7ba",
       "fb0efca6-eb50-45bf-b264-dc27bf17a376",
       "1dcd0a44-5f82-46c4-8bb8-1383ffd6732e"
+    ]
+  },
+  "U-00500": {
+    "user_id": "U-00500",
+    "arm": "holdout",
+    "last_trigger_at": "2026-10-01T09:08:01.492Z",
+    "current_dialect": "d1",
+    "active_goal": {
+      "goal_id": "G07",
+      "started_at": "2026-10-01T09:08:01.492Z",
+      "reason": "unfinished episodic title gune-halo-d1; last observed play 2026-09-24T17:05:08.729Z; remaining episode evidence=gune-halo-d1-s1e2"
+    },
+    "last_decision": "none",
+    "last_reason": "randomized holdout: no agent actions permitted",
+    "recent_evidence_event_ids": [
+      "d1fc0b1a-a261-486e-9dfc-04d81fa59c5b",
+      "b6494303-431b-4de3-ae95-d33de71420ee",
+      "f34c3f2b-582c-452b-b05c-170503d626e4",
+      "55021b09-6da2-4bde-8553-1ef063bcbdbc",
+      "c4fecb95-98b1-4787-bebb-abfb78d6a096",
+      "c2f3672d-bd85-4539-b8b0-9cb2c2ea09c3",
+      "ef84d1e5-7526-4a16-b2a2-e565e848dd71",
+      "20ebc8c5-a65f-4f38-9cfc-5263a0ceb44c"
     ]
   },
   "U-00664": {
@@ -19602,13 +19352,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T09:14:19.251Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T09:14:19.251Z",
-      "reason": "unfinished episodic title guka-kosusa-d2; last observed play 2026-09-25T00:16:16.356Z; remaining episode evidence=guka-kosusa-d2-s1e5"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 597252.762 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "a97029b6-04dc-40da-990e-d6fcc706512b",
       "511e02bc-ebb2-4078-b86d-a290530e83d6",
@@ -19750,7 +19496,7 @@
   "U-04916": {
     "user_id": "U-04916",
     "arm": "holdout",
-    "last_trigger_at": "2026-10-01T17:41:12.597Z",
+    "last_trigger_at": "2026-10-01T17:41:12.819Z",
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
@@ -19758,7 +19504,7 @@
       "reason": "unfinished episodic title gima-bhadaba-d1; last observed play 2026-09-04T23:11:41.799Z; remaining episode evidence=gima-bhadaba-d1-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "83e4ee4d-b4b0-4909-9689-346b3ec5f709",
       "360fcf5d-1206-42f0-9c41-5282ac07e11c",
@@ -20009,7 +19755,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "cac29e2f-340e-427b-9c82-4e9d613ff637",
       "e4877d67-706d-44f2-b223-f9bf65beb639",
@@ -20586,13 +20332,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T09:51:50.674Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G06",
-      "started_at": "2026-10-01T09:51:50.674Z",
-      "reason": "latest profile snapshot says lapsed"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 498771.999 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "4cd494d5-716c-489b-94d8-0b13e2075351",
       "d6bf1795-b3dc-446f-a31d-440ae88cc0b7",
@@ -20676,13 +20418,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T09:56:18.616Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T09:56:18.616Z",
-      "reason": "unfinished episodic title papa-rigiti-d1; last observed play 2026-09-02T16:10:44.228Z; remaining episode evidence=papa-rigiti-d1-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 522897.299 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "e1ddffdb-3dec-4a18-88ee-49c37d16db4d",
       "cf99ccf4-1882-4dcd-843e-568cb769e22c",
@@ -20773,7 +20511,7 @@
       "reason": "unfinished episodic title bagugu-gigupi-d1; last observed play 2026-09-16T07:57:15.244Z; remaining episode evidence=bagugu-gigupi-d1-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "4b5e8b7b-c9a8-4607-87a3-f649b1a5c8ce",
       "8314d2ff-76af-4daa-9364-f9406cf11fa6",
@@ -21005,7 +20743,7 @@
     "current_dialect": "d2",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "no profile snapshot; insufficient evidence for safe goal eligibility",
+    "last_reason": "stale buffered app_open: event age 282518.04 seconds; no foreground action",
     "recent_evidence_event_ids": []
   },
   "U-02918": {
@@ -21126,7 +20864,7 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "ecacbe5b-0df5-49fe-b031-db87b4eb90ab"
     ]
@@ -21332,7 +21070,7 @@
       "reason": "unfinished episodic title rasuya-moni-d6; last observed play 2026-09-28T06:10:26.249Z; remaining episode evidence=rasuya-moni-d6-s1e2"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "60a3dcd0-9b84-4fb8-aa74-a1eec8e132b7",
       "4252ae7c-f791-4bb7-bba7-adb46362d5a9",
@@ -21459,7 +21197,7 @@
       "reason": "unfinished episodic title hama-chudibha-d1; last observed play 2026-09-23T12:43:06.207Z; remaining episode evidence=hama-chudibha-d1-s1e2"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
+    "last_reason": "stale buffered app_open: event age 742589.09 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "994d7d35-23de-445d-8405-151cf629d5ef",
       "080c9c1d-3593-4c8c-8a2d-42b9358bf86d",
@@ -21501,8 +21239,17 @@
     "current_dialect": "d4",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "e80885ca-4363-4cd5-b5ae-c114085ed1fb",
+      "2a141479-e086-484a-a7c1-7ecb38cd6328",
+      "e4dd3114-c9ba-4879-a66c-bda9c96532f3",
+      "57bca682-9912-447c-88ab-e02935e9bf5c",
+      "756df0e5-8ad9-43f4-9c91-5997e5a76cdf",
+      "f9896309-84c0-4199-97a4-c4d3ea4e2912",
+      "2c26e76b-5f14-4f23-ac39-d6e63bfd05e8",
+      "1097f5ab-a236-4c97-a72b-1d9ae7d64d11"
+    ]
   },
   "U-03702": {
     "user_id": "U-03702",
@@ -21511,8 +21258,17 @@
     "current_dialect": "d5",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "a2b7f457-28e8-4003-93a6-36af010cfe27",
+      "501aeb8e-8108-44f0-96f0-14d5bf89a26f",
+      "95d40e09-4ddc-4d39-aa8b-e9cf2fcd68fa",
+      "b0d03683-0924-4cd2-87e5-90eac78b1ec6",
+      "394fc22f-a1b6-474c-8f17-4707c92048e6",
+      "fc193766-0e44-4920-87c6-575ffd86ffe0",
+      "7861f3b9-6801-4486-ba4d-d40b86f0e136",
+      "4123edd6-d46a-40ed-8ea3-f0cc0f330192"
+    ]
   },
   "U-04976": {
     "user_id": "U-04976",
@@ -21521,8 +21277,17 @@
     "current_dialect": "d3",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "ff41e6cf-9abb-45ba-8fa6-b3f2b456afa2",
+      "6e2c8152-4529-454a-9f31-6a78ad3ff800",
+      "0d392ad8-479d-4fd0-a2da-9aab27c91717",
+      "af0ec5a5-5984-4885-9431-cdd9b01ffe2d",
+      "0f605284-3766-4112-837b-eeec4d269ce9",
+      "bdbd8409-305b-448a-b384-ed3b7aa084a9",
+      "62a26ba0-0c4c-4f98-a1b5-483145bb2c7b",
+      "bba0de5f-4132-4b45-a5cf-2de53383b1f7"
+    ]
   },
   "U-02136": {
     "user_id": "U-02136",
@@ -21531,8 +21296,17 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "c6b3364d-cc1e-4823-b253-39f418ddc45b",
+      "757844cf-b917-40a8-9d1f-79e4bf5a392b",
+      "077f80d8-fd26-4916-8bb0-21d257545b93",
+      "440abd42-a007-4914-84fa-8d49f9fc946d",
+      "213efd17-99bb-498b-938e-d02fcfd45ca7",
+      "eff7ecb1-6243-4ef1-9699-11be99f2b795",
+      "5baff721-f429-4f87-9402-08dfb4c665bd",
+      "6190c9c5-3e3f-498f-8613-9254f3f43885"
+    ]
   },
   "U-03156": {
     "user_id": "U-03156",
@@ -21541,8 +21315,17 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "c03241f2-ad65-44dd-ac9f-689d762380d2",
+      "01d20828-d724-4d70-ab4a-a930142d30f8",
+      "a1fbb137-e001-4b3b-a987-e197429be323",
+      "5a24f39e-2d9b-4ba2-aa09-7e80059bfae6",
+      "d3df008a-1d0f-4437-8741-75dcd5085c89",
+      "d55608a6-0434-46e3-9b2c-4992ef963b40",
+      "070a4a5f-da8a-444e-9256-9fa800644f64",
+      "040eb4be-387b-4d98-bf1b-1e13a7cd5062"
+    ]
   },
   "U-01327": {
     "user_id": "U-01327",
@@ -21574,8 +21357,17 @@
     "current_dialect": "d2",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "eb922618-5dad-443a-bef8-28ddb7159c99",
+      "b47249f4-e02e-45e4-bfac-748b335e501f",
+      "a8a88a4c-c5d6-4d3c-a860-30e59f6f747b",
+      "8acf1ed6-e305-452d-beef-cc0fba105c67",
+      "8c9a982b-e007-4d39-bfb8-7b2fcfe6173a",
+      "d5c19cdf-7ec1-47fc-8d18-7d0153b1c926",
+      "8b537327-eadb-4ed0-b661-f4cdf8c79918",
+      "347c5f0f-8d35-4de0-bc2c-c9462adfc426"
+    ]
   },
   "U-04771": {
     "user_id": "U-04771",
@@ -21584,8 +21376,17 @@
     "current_dialect": "d5",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "e7091d48-535b-4fae-9741-2ff95365df58",
+      "dedd569b-7aa3-413f-8c32-298da5ab6152",
+      "48388ef6-9810-4364-88d2-990a47a110fb",
+      "719b882d-0c11-41a8-a04c-061eff9ac345",
+      "274435fa-0ff7-455e-9362-ff89fbcfbbc5",
+      "0a65dabc-3fd3-4b76-8737-645f030dad33",
+      "1311faa2-e9f5-4794-9be5-bcbef56ffe01",
+      "b8c96b7d-7a72-482f-833b-471e969b5921"
+    ]
   },
   "U-03417": {
     "user_id": "U-03417",
@@ -21594,8 +21395,17 @@
     "current_dialect": "d3",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "d8859c3f-2a67-4675-a62b-774fd1487fc3",
+      "c9af6804-31f7-4546-9f5d-2ae0c215541c",
+      "ea23ce48-743e-44e2-a53b-0db78edf969b",
+      "0f80d503-bde5-48ac-9ff1-7722e6738b64",
+      "c29f036c-95ea-4fce-bbcd-d971e50032f1",
+      "358e6eec-3d85-4fbb-ba80-a58b3e410027",
+      "df70c5c8-2b58-4466-8de0-b0f3c3d63915",
+      "c64f6464-0183-44d3-801c-a0988cdde41b"
+    ]
   },
   "U-02006": {
     "user_id": "U-02006",
@@ -21650,8 +21460,17 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "0efdbd51-e5dc-4496-8445-2e15e8568e11",
+      "22236b4e-746a-4a33-bd65-6a55927c79e3",
+      "24361e39-2653-4533-a728-7265fe44ba35",
+      "9129b45e-13e6-4e2f-8923-45555188c88f",
+      "5cf8940b-e137-4959-bb25-d2b9882f99ac",
+      "a8605d0a-bea3-4371-979a-0f890a88d0db",
+      "fdc457fd-756f-4284-a4dd-dbf8611e4ace",
+      "29484b77-b416-476e-b9a3-bd0546d89d0f"
+    ]
   },
   "U-02360": {
     "user_id": "U-02360",
@@ -21660,8 +21479,17 @@
     "current_dialect": "d6",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "864be737-a07d-4e50-9700-4dadfe4d43dd",
+      "560b76dc-ceaf-410e-a537-9f4ddc540828",
+      "8658ddfa-01dd-4350-8324-3b72ccc70745",
+      "810bd8ef-fc74-49b2-8f53-e52e43b58f40",
+      "93fdd867-d9a1-43bc-9ac9-6b4afc0f459c",
+      "25cea540-f814-49cb-81d4-ca036689079c",
+      "66d60fcf-bf99-4b9f-980f-e09dbfb2792e",
+      "50b5f08e-aef1-41e1-bd97-28f9c8e4a53b"
+    ]
   },
   "U-03022": {
     "user_id": "U-03022",
@@ -21693,7 +21521,7 @@
     "current_dialect": "d6",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: model_provider; fail-closed fallback",
+    "last_reason": "dependency unavailable/degraded: model_provider; deterministic fallback fails closed",
     "recent_evidence_event_ids": []
   },
   "U-02722": {
@@ -22135,11 +21963,11 @@
   "U-04550": {
     "user_id": "U-04550",
     "arm": "agent",
-    "last_trigger_at": "2026-10-01T10:56:54.708Z",
+    "last_trigger_at": "2026-10-01T10:56:55.888Z",
     "current_dialect": "d4",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "no profile snapshot; insufficient evidence for safe goal eligibility",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "8da56744-3f83-47d5-ae41-3b24b18b692a"
     ]
@@ -22270,7 +22098,7 @@
       "reason": "latest profile snapshot says lapsed"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G06 is still open",
+    "last_reason": "stale buffered app_open: event age 313226.791 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "ae60f6c7-fe97-48b5-9998-4143a9621e25",
       "d27fed47-4376-4805-afe1-b313ed9c73ca",
@@ -22534,13 +22362,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T11:12:40.974Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T11:12:40.974Z",
-      "reason": "unfinished episodic title pipa-d1; last observed play 2026-09-28T08:43:45.909Z; remaining episode evidence=pipa-d1-s1e2"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 350908.802 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "9fbe36bc-93ac-4a4c-b2f8-6fd91e1ad387",
       "4f968938-dc96-46dd-8268-731faf10269c",
@@ -22563,7 +22387,7 @@
       "reason": "unfinished episodic title radi-d4; last observed play 2026-09-04T10:09:02.888Z; remaining episode evidence=radi-d4-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "c1ed3864-e9dd-4a53-92cd-0d9eb00136ef",
       "9aa29c69-22e3-48fb-8f5c-0c6853d67895",
@@ -22668,13 +22492,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T11:18:54.289Z",
     "current_dialect": "d3",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T11:18:54.289Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 523532.12 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "e95d7154-0ec6-4829-89c6-2d624024c421",
       "a68a6885-e07f-4965-9a91-cfab27c63e3a",
@@ -22819,13 +22639,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T11:27:38.491Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T11:27:38.491Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 275380.797 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "4a74b158-8216-4485-b150-083180b686a9",
       "cdf42837-c135-4720-a6ca-1ce24cd0d7af",
@@ -23160,11 +22976,11 @@
   "U-03617": {
     "user_id": "U-03617",
     "arm": "agent",
-    "last_trigger_at": "2026-10-01T11:40:23.224Z",
+    "last_trigger_at": "2026-10-01T11:40:23.674Z",
     "current_dialect": "d3",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "no profile snapshot; insufficient evidence for safe goal eligibility",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "e22fb97b-bd6d-407c-ac4f-63cff8d9b47c"
     ]
@@ -23174,13 +22990,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T11:40:50.161Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T11:40:50.161Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 517685.89 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "794d19d2-b687-41c4-aef1-50219501ffb6",
       "c917d184-0e5e-46e4-87c2-ab832d18e18c",
@@ -23750,7 +23562,7 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "86d646f7-aa0b-4d19-bd8c-395f0d04cc0f"
     ]
@@ -23962,7 +23774,7 @@
       "reason": "unfinished episodic title pate-kari-d3; last observed play 2026-09-21T15:51:35.235Z; remaining episode evidence=pate-kari-d3-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "8220195a-b2be-4f68-9f7e-2aac74eb11c9",
       "5bfad6d6-b963-4e38-9139-1b205c9804c7",
@@ -24318,7 +24130,7 @@
   "U-02493": {
     "user_id": "U-02493",
     "arm": "holdout",
-    "last_trigger_at": "2026-10-01T15:06:37.829Z",
+    "last_trigger_at": "2026-10-01T15:06:38.165Z",
     "current_dialect": "d6",
     "active_goal": {
       "goal_id": "G02",
@@ -24326,7 +24138,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "aeda3cf7-7e65-4269-ba25-769785d436ab",
       "78ae5a38-1263-4401-8c99-61cbd0632389",
@@ -24464,7 +24276,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_reason": "stale buffered app_open: event age 586198.31 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "8719c087-4b2e-452b-a2a3-a040e636433d",
       "a897087b-42b2-476b-ae55-96deae9fc34b",
@@ -24590,13 +24402,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T12:25:15.885Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T12:25:15.885Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 658873.132 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "7dd6503b-441b-4f70-b6c1-b0be6db6344a",
       "e5061c24-8826-41fc-b4b2-166d08f21712",
@@ -24984,7 +24792,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_reason": "stale buffered app_open: event age 336599.508 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "b3936caf-6047-412e-8a57-900c866859dd",
       "31ce2a8b-c5dc-48aa-9f4b-89ebfe989e7d",
@@ -25134,8 +24942,11 @@
     "current_dialect": null,
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "bb7b938d-35b2-4400-969a-35c838b8e7da",
+      "04bd9bc2-b438-455a-ae74-034d10716cb2"
+    ]
   },
   "U-04640": {
     "user_id": "U-04640",
@@ -25144,7 +24955,7 @@
     "current_dialect": "d5",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T12:49:20.835Z",
+      "started_at": "2026-10-01T15:09:01.204Z",
       "reason": "unfinished episodic title kova-sako-d5; last observed play 2026-09-12T09:17:58.647Z; remaining episode evidence=kova-sako-d5-s1e1"
     },
     "last_decision": "none",
@@ -25580,13 +25391,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T13:07:53.646Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G01",
-      "started_at": "2026-10-01T13:07:53.646Z",
-      "reason": "signup within 7 days and no prior play_started event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 352704.138 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "bcfa00c3-8dab-4a48-ba1d-bc83cda127f8",
       "f619f9e0-1bc4-42af-a1c5-4a5e96532810",
@@ -25605,8 +25412,17 @@
     "current_dialect": "d2",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "49e64cce-3adf-4669-accd-6dea2a8fb875",
+      "ef971a3d-04b9-49b9-bfd7-b4aa25b4e33c",
+      "b02771f9-00a3-419a-bbb0-8e73e104f57d",
+      "917c40dc-e319-4645-b202-199303cd5f84",
+      "93aa89b3-3eae-4350-a7da-d860f675fdc7",
+      "e1ed3060-ebc8-44ae-b0ae-d81e72a0cf26",
+      "0287cce3-555d-48ad-9003-6451e229b4e8",
+      "b6747da2-77cc-4bc8-b497-3a8785811af7"
+    ]
   },
   "U-03839": {
     "user_id": "U-03839",
@@ -25638,8 +25454,17 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "34cde8ed-d08a-452e-85fd-4a3be02f7a47",
+      "f4a6e070-6c7c-40fc-a75d-9c2bf8c9ce4e",
+      "189d271a-815a-4600-bc87-4c798e2248a0",
+      "a450d531-d02a-4f89-a8d5-b28a56043740",
+      "c45c85f3-f7ef-4c21-9f9b-d5946f1bcfb5",
+      "7373b01c-0117-4426-adc4-08a9f286d801",
+      "75ead16d-4022-4218-b2c1-adc887bd2f4c",
+      "d83f904e-47be-4525-84e4-8897c0eaf8d4"
+    ]
   },
   "U-03212": {
     "user_id": "U-03212",
@@ -25648,8 +25473,17 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "3326a897-41d1-4fc9-b98e-043f610e012b",
+      "c5c7b004-d9ca-4416-b54d-acc28246911e",
+      "80a8667c-8b4d-4b86-94c7-87938198d846",
+      "6e248614-be41-4dca-a801-b1246bf045ea",
+      "b28ff58b-9180-4fc9-906e-86d36f3ec472",
+      "38474a27-3b02-42e0-aed2-7a2141fb49f7",
+      "7fcf14cd-8b96-4b05-8b52-39c665b25d09",
+      "d81fa218-294f-465c-b7d7-1c1132c92735"
+    ]
   },
   "U-01036": {
     "user_id": "U-01036",
@@ -25658,8 +25492,17 @@
     "current_dialect": "d5",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "200a8eec-e49e-4373-afc2-7e5eb07d1e03",
+      "56626a24-a905-4f1a-b45e-fcb87258c3b3",
+      "bc5ad3d2-fde2-4374-936f-86b0b281bd28",
+      "10661a83-57d9-479f-b89e-dfc3e5324edd",
+      "f126cafc-8775-44a2-bb57-e8e176a940e9",
+      "bda04489-99d0-4c62-beb8-b868e8159788",
+      "62042a05-0340-4e4a-b58f-57216542f833",
+      "74a7b7b9-89f9-48cf-b905-ae7109012830"
+    ]
   },
   "U-01781": {
     "user_id": "U-01781",
@@ -25668,8 +25511,17 @@
     "current_dialect": "d2",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "cb832bcf-ee60-4316-ae10-0c9f795bca7b",
+      "3d3c707f-9dab-4f8b-ac8f-f8433bf6da92",
+      "5ed2809d-7d65-4c74-941d-1e2ea47f1979",
+      "5cfe273f-f3a0-4233-805f-83c4ed2622e8",
+      "4a70155e-d146-4fb7-8357-c00830afd419",
+      "aeafd2c7-2249-4dbe-a284-c02e37a6edcb",
+      "0244a4ca-c561-44ce-ae3e-a9cb0be0ee79",
+      "c8b9416e-ebfa-4d5b-a0da-1696e21d1354"
+    ]
   },
   "U-01704": {
     "user_id": "U-01704",
@@ -25678,8 +25530,10 @@
     "current_dialect": "d4",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "0793abd9-213c-4227-8cd7-03cd24e96e03"
+    ]
   },
   "U-01534": {
     "user_id": "U-01534",
@@ -25688,8 +25542,17 @@
     "current_dialect": "d3",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "6572f4e0-4f6d-4f38-b132-00be1419ff10",
+      "0b54655c-5ee0-431f-8da8-50ac951465d3",
+      "d17a1ade-60fb-482e-abf4-718de74aa4be",
+      "b7a8bb4c-b9f1-4b52-a5f7-1059e3ad6852",
+      "d6ba08b6-ba8d-4cd6-b7d1-ff3247f134d5",
+      "8bef2204-b38e-424e-abf7-cf15f309e9bd",
+      "4a2d312e-2d81-4413-8bed-6ab274e7af64",
+      "c719b823-4e70-4eb6-8a9c-d5cdf272cfe0"
+    ]
   },
   "U-04895": {
     "user_id": "U-04895",
@@ -25698,8 +25561,17 @@
     "current_dialect": "d2",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "b47c847e-e764-4a6e-9831-c9df82b43a2e",
+      "d3f9b6dd-9fe4-489f-88b8-024b6d32cb49",
+      "86f57dd7-2d96-469d-95c4-ebc9f2b8aabf",
+      "6a04c573-b7d2-4233-bd90-f3323a117cf3",
+      "a2adf668-fd79-4ae3-92a4-3180c3529380",
+      "ddea12ea-74bf-4acf-92bc-e2efadc88f54",
+      "ea38c55f-32df-4db0-8ba1-d38e32aa1422",
+      "08629870-7405-46eb-87ac-bdc3af8eb42a"
+    ]
   },
   "U-01743": {
     "user_id": "U-01743",
@@ -25731,8 +25603,10 @@
     "current_dialect": "d1",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "41637ecd-7272-4b1b-9dd2-05472189825a"
+    ]
   },
   "U-03475": {
     "user_id": "U-03475",
@@ -25741,8 +25615,17 @@
     "current_dialect": "d2",
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "dependency unavailable/degraded: user_data_store; fail-closed fallback",
-    "recent_evidence_event_ids": []
+    "last_reason": "dependency unavailable/degraded: user_data_store; deterministic fallback fails closed",
+    "recent_evidence_event_ids": [
+      "a0576671-da34-4e9a-83d2-053d6eb4b609",
+      "5bce8bd3-d508-4c05-9c9b-3503305acd3c",
+      "3122c0b0-9b28-44a6-8488-3e39677c5fca",
+      "76f02f1d-9015-4c9f-a7a6-8e1de385e0c9",
+      "f3660ade-bd3a-4246-a087-263acbcca197",
+      "fc690c2d-f8bb-4d10-b313-c3b9831d4b6a",
+      "488c691d-3d4c-49c8-bf53-d85b228f4a0a",
+      "aabb9e9d-bc0a-4cb8-92d5-4980a2a6fae9"
+    ]
   },
   "U-02130": {
     "user_id": "U-02130",
@@ -26133,7 +26016,7 @@
       "reason": "unfinished episodic title gubava-gihaya-d5; last observed play 2026-09-16T16:36:39.251Z; remaining episode evidence=gubava-gihaya-d5-s1e5"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "cd3da2b7-6c53-4065-a549-ff55c6eeb258",
       "b70b7572-7cd5-4c66-a5a2-a8799a303623",
@@ -26968,13 +26851,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T13:49:17.775Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T13:49:17.775Z",
-      "reason": "unfinished episodic title risu-d5; last observed play 2026-09-09T21:31:14.284Z; remaining episode evidence=risu-d5-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 371053.721 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "41c81f40-b12a-4110-b5b9-5e9235e34c4d",
       "bc5002fd-1565-49c6-bdc1-4ee024124a40",
@@ -27175,13 +27054,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T13:54:16.137Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G01",
-      "started_at": "2026-10-01T13:54:16.137Z",
-      "reason": "signup within 7 days and no prior play_started event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 696180.79 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "93aeea50-af61-4374-ab37-f16babbdcafa",
       "99696ce4-c077-4a5f-a509-143c6c785057",
@@ -27340,13 +27215,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T14:00:03.513Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T14:00:03.513Z",
-      "reason": "unfinished episodic title hama-chudibha-d1; last observed play 2026-09-09T04:41:07.899Z; remaining episode evidence=hama-chudibha-d1-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 569903.674 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "abae898c-ae16-428a-8c08-1114d4b22efa",
       "b52feb18-92fc-41e0-ba21-32caacc80b09",
@@ -27386,13 +27257,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T14:02:02.074Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T14:02:02.074Z",
-      "reason": "unfinished episodic title jamo-hasa-d5; last observed play 2026-09-03T07:14:06.434Z; remaining episode evidence=jamo-hasa-d5-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 302664.468 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "b36af922-a270-43ac-a1ca-4d7e29765d4b",
       "740b94df-8ede-4801-aaf8-9f8f72a24c53",
@@ -28144,7 +28011,7 @@
     "current_dialect": "d2",
     "active_goal": {
       "goal_id": "G07",
-      "started_at": "2026-10-01T14:19:47.991Z",
+      "started_at": "2026-10-01T16:45:57.441Z",
       "reason": "unfinished episodic title molo-d2; last observed play 2026-09-24T06:03:05.720Z; remaining episode evidence=molo-d2-s1e5"
     },
     "last_decision": "none",
@@ -28221,11 +28088,11 @@
   "U-03529": {
     "user_id": "U-03529",
     "arm": "holdout",
-    "last_trigger_at": "2026-10-01T14:21:44.916Z",
-    "current_dialect": "d2",
+    "last_trigger_at": "2026-10-01T14:21:45.398Z",
+    "current_dialect": null,
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "748482bf-a19c-432e-8fbf-690d13c37fd1"
     ]
@@ -28327,13 +28194,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T14:22:03.526Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T14:22:03.526Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 687139.503 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "053f5d36-a963-4c63-a99b-3554cb5db398",
       "5c21dd23-bf1f-4c88-b827-fd6f8f5d21b0",
@@ -28467,7 +28330,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "1a702263-9fa7-4de4-add9-08056d1afb73",
       "4f124e70-26b8-40b3-b684-4b63b02d1a45",
@@ -28669,13 +28532,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T14:29:33.878Z",
     "current_dialect": "d6",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T14:29:33.878Z",
-      "reason": "unfinished episodic title naka-d6; last observed play 2026-09-28T13:51:37.291Z; remaining episode evidence=naka-d6-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 595493.753 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "725a7702-a2d9-4464-a80e-ade32b72d03e",
       "7ad19c9b-681a-4cf2-9f68-ce1b3fdc1388",
@@ -29055,7 +28914,7 @@
       "reason": "unfinished episodic title dhapipa-gini-d2; last observed play 2026-09-19T10:14:48.637Z; remaining episode evidence=dhapipa-gini-d2-s1e2"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "e4ad273a-85ad-4172-a870-fa0c4a32eab6",
       "f3d7f577-e8f6-46e3-a3d0-68b6be8a1172",
@@ -29759,13 +29618,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T14:58:54.073Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T14:58:54.073Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-18T14:57:16.465Z; remaining episode evidence=molo-d2-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 446513.343 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "44d13540-70fc-4f0e-a002-f33a239126db",
       "22270d94-3364-45b6-80b7-440e27f45083",
@@ -30023,29 +29878,6 @@
       "ba0368ee-7f48-438b-83a0-2239dde79234"
     ]
   },
-  "U-00061": {
-    "user_id": "U-00061",
-    "arm": "agent",
-    "last_trigger_at": "2026-10-01T16:41:27.998Z",
-    "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T15:01:01.249Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-26T06:19:00.310Z; remaining episode evidence=molo-d2-s1e3"
-    },
-    "last_decision": "none",
-    "last_reason": "existing active goal G07 is still open",
-    "recent_evidence_event_ids": [
-      "3a34c4be-2a5f-41c8-9adf-bdbbf6b82c67",
-      "ff21db3e-873b-4880-b6f8-d453545b128b",
-      "362787a7-62d5-434c-b2d1-b5a6e2b7f1ad",
-      "f8bd3d85-bb8f-4226-8ea4-e23d4ee0a987",
-      "7489e717-7dca-4614-b4fa-b81ba6636984",
-      "0ecd816a-d8be-4874-934c-7535da944b1d",
-      "c38fcbb1-9b9d-4bcc-8230-fc255bafa4de",
-      "a1e0fd7b-187f-428e-8777-94964f3dba8a"
-    ]
-  },
   "U-01543": {
     "user_id": "U-01543",
     "arm": "agent",
@@ -30067,6 +29899,29 @@
       "7b499706-c11c-47d9-b87a-5ce2885b5e4f",
       "89567430-f575-44e1-82a5-8173eee17306",
       "4d26f778-f16d-42d2-8f87-7234226f6ade"
+    ]
+  },
+  "U-00061": {
+    "user_id": "U-00061",
+    "arm": "agent",
+    "last_trigger_at": "2026-10-01T16:41:27.998Z",
+    "current_dialect": "d2",
+    "active_goal": {
+      "goal_id": "G07",
+      "started_at": "2026-10-01T15:01:01.249Z",
+      "reason": "unfinished episodic title molo-d2; last observed play 2026-09-26T06:19:00.310Z; remaining episode evidence=molo-d2-s1e3"
+    },
+    "last_decision": "none",
+    "last_reason": "existing active goal G07 is still open",
+    "recent_evidence_event_ids": [
+      "3a34c4be-2a5f-41c8-9adf-bdbbf6b82c67",
+      "ff21db3e-873b-4880-b6f8-d453545b128b",
+      "362787a7-62d5-434c-b2d1-b5a6e2b7f1ad",
+      "f8bd3d85-bb8f-4226-8ea4-e23d4ee0a987",
+      "7489e717-7dca-4614-b4fa-b81ba6636984",
+      "0ecd816a-d8be-4874-934c-7535da944b1d",
+      "c38fcbb1-9b9d-4bcc-8230-fc255bafa4de",
+      "a1e0fd7b-187f-428e-8777-94964f3dba8a"
     ]
   },
   "U-01931": {
@@ -30847,7 +30702,7 @@
     "current_dialect": null,
     "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "ae347786-4444-468c-a89a-d410891d540e",
       "b840ed28-fcad-417c-a257-d25fce4a429e",
@@ -31023,7 +30878,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "e9036e69-3869-41f1-be71-69b6ff4ecac8",
       "f11ced45-97c5-437e-9888-c5c9019157b3",
@@ -31217,6 +31072,29 @@
       "860ea390-98af-4012-b5f9-7de8b0c09a09"
     ]
   },
+  "U-03945": {
+    "user_id": "U-03945",
+    "arm": "agent",
+    "last_trigger_at": "2026-10-01T15:05:55.151Z",
+    "current_dialect": "d1",
+    "active_goal": {
+      "goal_id": "G06",
+      "started_at": "2026-10-01T15:05:55.151Z",
+      "reason": "latest profile snapshot says lapsed"
+    },
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "recent_evidence_event_ids": [
+      "4322fd44-0849-49e8-8698-6e9bc7f9d5fc",
+      "6a9584c4-cfa3-461c-a41c-3db5c861cc1e",
+      "82c872cd-8ce3-44c1-af1b-f44932dd0bdf",
+      "21d2b52f-bb95-4f66-99de-c77aebfdd2e5",
+      "6ec52763-88df-45e5-ad5c-cfa4e57b1d6c",
+      "3ee66e78-28c0-494d-a182-e57a2f28cba1",
+      "48cec452-f165-4c17-a84f-806f553a2728",
+      "190a6a6a-ae6f-4e03-8054-e2c62599ab98"
+    ]
+  },
   "U-02544": {
     "user_id": "U-02544",
     "arm": "agent",
@@ -31284,29 +31162,6 @@
       "20240d58-638d-43ab-8da2-abec76752e5a",
       "29298674-ee30-4f32-ace7-1836d0757ad9",
       "1dfd5f93-c290-49c1-92d2-a7d98710d8ec"
-    ]
-  },
-  "U-03945": {
-    "user_id": "U-03945",
-    "arm": "agent",
-    "last_trigger_at": "2026-10-01T15:05:55.151Z",
-    "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G06",
-      "started_at": "2026-10-01T15:05:55.151Z",
-      "reason": "latest profile snapshot says lapsed"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
-    "recent_evidence_event_ids": [
-      "4322fd44-0849-49e8-8698-6e9bc7f9d5fc",
-      "6a9584c4-cfa3-461c-a41c-3db5c861cc1e",
-      "82c872cd-8ce3-44c1-af1b-f44932dd0bdf",
-      "21d2b52f-bb95-4f66-99de-c77aebfdd2e5",
-      "6ec52763-88df-45e5-ad5c-cfa4e57b1d6c",
-      "3ee66e78-28c0-494d-a182-e57a2f28cba1",
-      "48cec452-f165-4c17-a84f-806f553a2728",
-      "190a6a6a-ae6f-4e03-8054-e2c62599ab98"
     ]
   },
   "U-01699": {
@@ -31496,29 +31351,6 @@
       "6c768052-679d-4b84-99bd-fab5d08b28bb"
     ]
   },
-  "U-00475": {
-    "user_id": "U-00475",
-    "arm": "agent",
-    "last_trigger_at": "2026-10-01T15:07:09.486Z",
-    "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T15:07:09.486Z",
-      "reason": "unfinished episodic title molo-d2; last observed play 2026-08-31T21:44:55.723Z; remaining episode evidence=molo-d2-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
-    "recent_evidence_event_ids": [
-      "7d8184ff-baf1-40d2-87d1-67ccfc9c1074",
-      "115f566c-aa91-420c-bfd6-86309ad994e6",
-      "be5876ff-207f-4809-b8b8-40d5f56f2195",
-      "a39789e3-41f9-4995-b641-bfce14461679",
-      "2bb6ce20-ebff-4ac0-9784-94c57eb0647d",
-      "87c77dbc-a28f-465a-985c-7d1e5f7cfd2c",
-      "afa36499-e785-4d7f-a961-26e7e9752a92",
-      "27ff8e90-0f26-4600-a9a3-ad5cafdadfe3"
-    ]
-  },
   "U-04850": {
     "user_id": "U-04850",
     "arm": "holdout",
@@ -31540,6 +31372,29 @@
       "c54a9797-e8d7-4b6c-a45f-b91211134fb9",
       "98f08008-cc61-4434-b76b-c5f92221c2d5",
       "2aa3e775-a1ee-4c53-859c-cc4f9e471a1e"
+    ]
+  },
+  "U-00475": {
+    "user_id": "U-00475",
+    "arm": "agent",
+    "last_trigger_at": "2026-10-01T15:07:09.486Z",
+    "current_dialect": "d2",
+    "active_goal": {
+      "goal_id": "G07",
+      "started_at": "2026-10-01T15:07:09.486Z",
+      "reason": "unfinished episodic title molo-d2; last observed play 2026-08-31T21:44:55.723Z; remaining episode evidence=molo-d2-s1e1"
+    },
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "recent_evidence_event_ids": [
+      "7d8184ff-baf1-40d2-87d1-67ccfc9c1074",
+      "115f566c-aa91-420c-bfd6-86309ad994e6",
+      "be5876ff-207f-4809-b8b8-40d5f56f2195",
+      "a39789e3-41f9-4995-b641-bfce14461679",
+      "2bb6ce20-ebff-4ac0-9784-94c57eb0647d",
+      "87c77dbc-a28f-465a-985c-7d1e5f7cfd2c",
+      "afa36499-e785-4d7f-a961-26e7e9752a92",
+      "27ff8e90-0f26-4600-a9a3-ad5cafdadfe3"
     ]
   },
   "U-03250": {
@@ -32146,6 +32001,18 @@
       "ee9f0215-eba7-4e3f-89b4-bfe9da37cbe7"
     ]
   },
+  "U-01141": {
+    "user_id": "U-01141",
+    "arm": "agent",
+    "last_trigger_at": "2026-10-01T15:09:46.788Z",
+    "current_dialect": "d5",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "no profile snapshot; insufficient evidence for safe goal eligibility",
+    "recent_evidence_event_ids": [
+      "453b4b88-eb54-428b-8d36-0642b364262d"
+    ]
+  },
   "U-01413": {
     "user_id": "U-01413",
     "arm": "holdout",
@@ -32167,18 +32034,6 @@
       "6fa985c2-e811-417a-8649-6d492fe98617",
       "ae5a6773-784a-4cda-9b0b-3e7fab9e6f3d",
       "45775211-7b68-496c-a371-b7b61879bb4a"
-    ]
-  },
-  "U-01141": {
-    "user_id": "U-01141",
-    "arm": "agent",
-    "last_trigger_at": "2026-10-01T15:09:46.788Z",
-    "current_dialect": "d5",
-    "active_goal": null,
-    "last_decision": "none",
-    "last_reason": "no profile snapshot; insufficient evidence for safe goal eligibility",
-    "recent_evidence_event_ids": [
-      "453b4b88-eb54-428b-8d36-0642b364262d"
     ]
   },
   "U-01657": {
@@ -32382,13 +32237,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T15:13:59.436Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T15:13:59.436Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 347466.697 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "af359207-00bc-4add-a0cf-711d814574cd",
       "7a18368c-bb05-420b-bf4d-9a974feb6106",
@@ -32498,7 +32349,7 @@
       "reason": "unfinished episodic title gisu-d2; last observed play 2026-09-04T02:23:29.341Z; remaining episode evidence=gisu-d2-s1e1"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "40765157-1d21-42ea-b869-46eaca43658f",
       "89b28bdc-5851-4d29-9cd9-5a7784420f66",
@@ -32856,13 +32707,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T15:24:44.826Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T15:24:44.826Z",
-      "reason": "unfinished episodic title jamo-hasa-d5; last observed play 2026-09-10T18:17:25.293Z; remaining episode evidence=jamo-hasa-d5-s1e1"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 492710.031 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "f0324c82-b99a-4bbe-ac9c-ad8fae86c8d1",
       "8df5e45f-e472-43cb-bb9e-05aed96bf038",
@@ -32897,6 +32744,18 @@
       "6ad5de71-1912-4962-bf0b-04759e7bc3ff"
     ]
   },
+  "U-02968": {
+    "user_id": "U-02968",
+    "arm": "holdout",
+    "last_trigger_at": "2026-10-01T15:26:26.180Z",
+    "current_dialect": "d2",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "randomized holdout: no agent actions permitted",
+    "recent_evidence_event_ids": [
+      "520a8b57-42dc-43f6-ba42-e7a4113e3fe1"
+    ]
+  },
   "U-04430": {
     "user_id": "U-04430",
     "arm": "agent",
@@ -32918,18 +32777,6 @@
       "42880df4-ccea-4bc8-b33a-f4d413e5efc4",
       "e364ba54-a4fc-40b2-bebe-5b249409e3ef",
       "f79ec956-14e5-4dfd-987e-65701680b8bb"
-    ]
-  },
-  "U-02968": {
-    "user_id": "U-02968",
-    "arm": "holdout",
-    "last_trigger_at": "2026-10-01T15:26:26.180Z",
-    "current_dialect": "d2",
-    "active_goal": null,
-    "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
-    "recent_evidence_event_ids": [
-      "520a8b57-42dc-43f6-ba42-e7a4113e3fe1"
     ]
   },
   "U-03102": {
@@ -33219,11 +33066,11 @@
     "current_dialect": "d4",
     "active_goal": {
       "goal_id": "G08",
-      "started_at": "2026-10-01T15:33:06.753Z",
+      "started_at": "2026-10-01T15:50:20.883Z",
       "reason": "active subscriber and at least one available title released within prior 30 days"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "599b4522-ab24-4250-bfc9-45ea7c3b76ee",
       "3a8bb511-6d61-45fe-9d48-00e9fb391585",
@@ -33342,15 +33189,15 @@
   "U-00899": {
     "user_id": "U-00899",
     "arm": "agent",
-    "last_trigger_at": "2026-10-01T15:36:35.886Z",
+    "last_trigger_at": "2026-10-01T15:36:36.439Z",
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G07",
       "started_at": "2026-10-01T15:36:35.886Z",
       "reason": "unfinished episodic title hama-chudibha-d1; last observed play 2026-09-18T08:32:25.359Z; remaining episode evidence=hama-chudibha-d1-s1e1"
     },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "last_decision": "none",
+    "last_reason": "login_success recorded; login cannot publish a foreground action",
     "recent_evidence_event_ids": [
       "fd64d184-b45e-4379-826e-5237e4eea9ce",
       "f6285e5e-7dd8-44d9-9736-fc90217cdb05",
@@ -33961,7 +33808,7 @@
       "reason": "unfinished episodic title rasuya-moni-d6; last observed play 2026-09-21T05:54:38.803Z; remaining episode evidence=rasuya-moni-d6-s1e2"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "0348ea86-1a5c-444f-9c7f-d65dc6646a52",
       "84a223b6-052e-45d9-8eab-89f230165f0e",
@@ -34024,13 +33871,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T15:56:15.229Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G05",
-      "started_at": "2026-10-01T15:56:15.229Z",
-      "reason": "profile says never; no observed non-trial purchase event"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 504110.726 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "771cd57a-0c0f-49ba-8fb9-37355ef28319",
       "280931c0-7773-4c88-9878-bff8d6ec7879",
@@ -34099,7 +33942,7 @@
       "reason": "no prior episode_completed event in received-event history"
     },
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "duplicate trigger event_id",
     "recent_evidence_event_ids": [
       "36968a10-ae3a-47a7-a9fa-555395278674",
       "d0106ca3-8908-458c-b8ca-24d314ad52f5",
@@ -34265,6 +34108,18 @@
       "4c7a4c41-e58e-4d30-9c31-2537736ff1f7"
     ]
   },
+  "U-03026": {
+    "user_id": "U-03026",
+    "arm": "holdout",
+    "last_trigger_at": "2026-10-01T16:06:13.331Z",
+    "current_dialect": "d3",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "randomized holdout: no agent actions permitted",
+    "recent_evidence_event_ids": [
+      "c40cac6f-98f7-47a5-b2f0-069ff34fb5ae"
+    ]
+  },
   "U-01433": {
     "user_id": "U-01433",
     "arm": "agent",
@@ -34286,18 +34141,6 @@
       "cf65d57a-34a4-4c4e-a234-3f77ff215136",
       "f75a06ea-c539-4efd-bc10-26853c5c1cac",
       "252e6bdb-d340-4cb8-a2f5-fd9c73c3ebc9"
-    ]
-  },
-  "U-03026": {
-    "user_id": "U-03026",
-    "arm": "holdout",
-    "last_trigger_at": "2026-10-01T16:06:13.331Z",
-    "current_dialect": "d3",
-    "active_goal": null,
-    "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
-    "recent_evidence_event_ids": [
-      "c40cac6f-98f7-47a5-b2f0-069ff34fb5ae"
     ]
   },
   "U-04331": {
@@ -34351,13 +34194,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T16:08:06.935Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G08",
-      "started_at": "2026-10-01T16:08:06.935Z",
-      "reason": "active subscriber and at least one available title released within prior 30 days"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 613259.987 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "20f42275-6385-4061-b229-99230202a50c",
       "bd89fcf2-6cff-4246-a035-cbea7734bfa1",
@@ -34507,29 +34346,6 @@
       "eae93a38-d9fc-4313-aaa8-34978f5f0384"
     ]
   },
-  "U-01886": {
-    "user_id": "U-01886",
-    "arm": "holdout",
-    "last_trigger_at": "2026-10-01T16:10:20.007Z",
-    "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T16:10:20.007Z",
-      "reason": "unfinished episodic title rigu-dhadi-d2; last observed play 2026-09-22T14:52:54.532Z; remaining episode evidence=rigu-dhadi-d2-s1e3"
-    },
-    "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
-    "recent_evidence_event_ids": [
-      "66ad85b2-6655-4148-9e5e-a9dff7cfb928",
-      "2f53ea0f-a66b-40b8-be5b-ac01455509ff",
-      "86ce0592-0978-4710-8756-2dc258f121fa",
-      "57668783-eb11-4b56-9601-a56ac4ffd9aa",
-      "42c7044c-227f-40bc-9402-1d14c956ca04",
-      "c9ab72aa-79c0-44e4-8c02-4b1d7cb331dd",
-      "eeb6144c-8d85-4c2c-8f09-97d844a47941",
-      "92aa2aa4-5a81-426f-82d4-2dbdc769fd21"
-    ]
-  },
   "U-04530": {
     "user_id": "U-04530",
     "arm": "holdout",
@@ -34551,6 +34367,29 @@
       "f70c5a60-6d2e-4ace-898a-2eae7e900d19",
       "1baa3bc4-48de-40f8-927d-731ff018f8f7",
       "a9f7acb7-cc7b-4865-93d4-3f731de213fc"
+    ]
+  },
+  "U-01886": {
+    "user_id": "U-01886",
+    "arm": "holdout",
+    "last_trigger_at": "2026-10-01T16:10:20.007Z",
+    "current_dialect": "d2",
+    "active_goal": {
+      "goal_id": "G07",
+      "started_at": "2026-10-01T16:10:20.007Z",
+      "reason": "unfinished episodic title rigu-dhadi-d2; last observed play 2026-09-22T14:52:54.532Z; remaining episode evidence=rigu-dhadi-d2-s1e3"
+    },
+    "last_decision": "none",
+    "last_reason": "randomized holdout: no agent actions permitted",
+    "recent_evidence_event_ids": [
+      "66ad85b2-6655-4148-9e5e-a9dff7cfb928",
+      "2f53ea0f-a66b-40b8-be5b-ac01455509ff",
+      "86ce0592-0978-4710-8756-2dc258f121fa",
+      "57668783-eb11-4b56-9601-a56ac4ffd9aa",
+      "42c7044c-227f-40bc-9402-1d14c956ca04",
+      "c9ab72aa-79c0-44e4-8c02-4b1d7cb331dd",
+      "eeb6144c-8d85-4c2c-8f09-97d844a47941",
+      "92aa2aa4-5a81-426f-82d4-2dbdc769fd21"
     ]
   },
   "U-03761": {
@@ -34587,13 +34426,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T16:11:34.736Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T16:11:34.736Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 590637.472 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "0af4277b-ed39-4ae0-9285-79c5a142602f",
       "ded36e1b-1bab-4133-9247-5159b09ca164",
@@ -35852,13 +35687,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T16:50:02.577Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G08",
-      "started_at": "2026-10-01T16:50:02.577Z",
-      "reason": "active subscriber and at least one available title released within prior 30 days"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 303218.788 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "7c43df9d-4b79-4f56-b8b0-fb3dce427afd",
       "ba36bd6f-0eb5-4b72-afa3-ff8ec41d4f02",
@@ -35941,13 +35772,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T16:52:45.855Z",
     "current_dialect": "d1",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T16:52:45.855Z",
-      "reason": "unfinished episodic title bagugu-gigupi-d1; last observed play 2026-09-27T16:32:49.063Z; remaining episode evidence=bagugu-gigupi-d1-s1e1"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 282956.548 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "680eb737-a6cf-4399-863a-08ba2d2bf694",
       "3111e4ad-60c9-48aa-924e-c2af387e91f4",
@@ -36214,13 +36041,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T17:03:08.472Z",
     "current_dialect": "d5",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T17:03:08.472Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 646087.475 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "414c6afc-8327-4727-9ac2-18de69dd1137",
       "c62a1e8d-2608-4639-b677-8c3841c41569",
@@ -36397,13 +36220,9 @@
     "arm": "agent",
     "last_trigger_at": "2026-10-01T17:09:59.948Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T17:09:59.948Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 437554.304 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "b592845a-0fb6-487d-8d9e-b6afafe66c1b",
       "cb182a5e-b7cd-40d5-bdc5-26c3450d9c17",
@@ -36421,11 +36240,11 @@
     "current_dialect": "d1",
     "active_goal": {
       "goal_id": "G02",
-      "started_at": "2026-10-01T17:10:02.595Z",
+      "started_at": "2026-10-01T17:44:01.075Z",
       "reason": "no prior episode_completed event in received-event history"
     },
-    "last_decision": "none",
-    "last_reason": "existing active goal G02 is still open",
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
     "recent_evidence_event_ids": [
       "bbae7c2f-c130-4710-8416-4bdf63e5dc86",
       "33c9b619-57e2-4882-a8bd-079912f939a6",
@@ -36596,6 +36415,26 @@
       "fc5dffdc-cbd5-460b-9cee-7505c563ba86"
     ]
   },
+  "U-02676": {
+    "user_id": "U-02676",
+    "arm": "agent",
+    "last_trigger_at": "2026-10-01T17:15:25.503Z",
+    "current_dialect": "d2",
+    "active_goal": {
+      "goal_id": "G01",
+      "started_at": "2026-10-01T17:15:25.503Z",
+      "reason": "signup within 7 days and no prior play_started event"
+    },
+    "last_decision": "home_page",
+    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "recent_evidence_event_ids": [
+      "c9399a36-5dae-47d2-8852-2fad69c91515",
+      "0656be24-bae4-4cd5-a8ff-8675e5e1f838",
+      "b3f80dc1-47a2-42a6-8c7e-2c950b3ed5b0",
+      "e1c35ce3-1724-4ed0-9387-56f948ffde61",
+      "970b1085-40d9-43f7-b00c-d201e45d4dca"
+    ]
+  },
   "U-04886": {
     "user_id": "U-04886",
     "arm": "holdout",
@@ -36619,38 +36458,14 @@
       "012f0862-7540-4bb1-b1ef-88de8ea72ce3"
     ]
   },
-  "U-02676": {
-    "user_id": "U-02676",
-    "arm": "agent",
-    "last_trigger_at": "2026-10-01T17:15:25.503Z",
-    "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G01",
-      "started_at": "2026-10-01T17:15:25.503Z",
-      "reason": "signup within 7 days and no prior play_started event"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
-    "recent_evidence_event_ids": [
-      "c9399a36-5dae-47d2-8852-2fad69c91515",
-      "0656be24-bae4-4cd5-a8ff-8675e5e1f838",
-      "b3f80dc1-47a2-42a6-8c7e-2c950b3ed5b0",
-      "e1c35ce3-1724-4ed0-9387-56f948ffde61",
-      "970b1085-40d9-43f7-b00c-d201e45d4dca"
-    ]
-  },
   "U-03667": {
     "user_id": "U-03667",
     "arm": "agent",
     "last_trigger_at": "2026-10-01T17:15:30.676Z",
     "current_dialect": "d4",
-    "active_goal": {
-      "goal_id": "G02",
-      "started_at": "2026-10-01T17:15:30.676Z",
-      "reason": "no prior episode_completed event in received-event history"
-    },
-    "last_decision": "home_page",
-    "last_reason": "eligible goal selected; personalized page built from currently available titles",
+    "active_goal": null,
+    "last_decision": "none",
+    "last_reason": "stale buffered app_open: event age 728226.211 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "986ef466-79bd-496d-a28b-e003d4453857",
       "7e3e9900-2b2b-4c04-9b5b-126fa974a840",
@@ -37915,13 +37730,9 @@
     "arm": "holdout",
     "last_trigger_at": "2026-10-01T18:23:44.843Z",
     "current_dialect": "d2",
-    "active_goal": {
-      "goal_id": "G07",
-      "started_at": "2026-10-01T18:23:44.843Z",
-      "reason": "unfinished episodic title rigu-dhadi-d2; last observed play 2026-09-18T10:37:16.438Z; remaining episode evidence=rigu-dhadi-d2-s1e2"
-    },
+    "active_goal": null,
     "last_decision": "none",
-    "last_reason": "randomized holdout: no agent actions permitted",
+    "last_reason": "stale buffered app_open: event age 284500.14 seconds; no foreground action",
     "recent_evidence_event_ids": [
       "73a271cd-f807-4c85-812d-5acf7e49fd7e",
       "887b1ab0-5bfe-4ae7-85b7-5968fa9eb894",

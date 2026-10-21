@@ -216,17 +216,93 @@ class AgentTests(unittest.TestCase):
     def test_unsupported_model_output_cannot_influence_actions(self):
         a = Agent(PACK, tempfile.mkdtemp())
         self.assertFalse(a._validate_model_output('not-json'))
+        user = self._agent_user(a)
+        at = dt('2026-10-01T12:00:00Z')
         self.assertTrue(a._validate_model_output({
             'goal_id': 'G04',
-            'eligible': True,
+            'eligible': False,
             'confidence': 1,
             'reason': 'untrusted claim',
-        }))
+        }, user, at, 'd1'))
         event = self._trigger(a, 'app_open', 'model-output-1', 'session-model')
         event['_failure_reason'] = 'model output rejected'
         a.handle_trigger(event)
         self.assertEqual(a.actions, [])
         self.assertIn('model output rejected', a.decisions[-1]['reason'])
+
+    def test_model_output_validation_requires_trusted_context(self):
+        a = Agent(PACK, tempfile.mkdtemp())
+        structurally_valid = {
+            'goal_id': 'G04',
+            'eligible': False,
+            'confidence': 0.5,
+            'reason': 'untrusted text',
+        }
+        self.assertFalse(a._validate_model_output(structurally_valid))
+
+    def test_model_output_validation_rejects_types_goal_confidence_and_fields(self):
+        a = Agent(PACK, tempfile.mkdtemp())
+        valid = {
+            'goal_id': 'G04',
+            'eligible': True,
+            'confidence': 0.9,
+            'reason': 'model text is not evidence',
+        }
+        for key, value in (
+            ('eligible', 'true'),
+            ('confidence', 1.1),
+            ('goal_id', 'G999'),
+        ):
+            candidate = dict(valid)
+            candidate[key] = value
+            self.assertFalse(a._validate_model_output(candidate))
+        unexpected = dict(valid, authorize_action=True)
+        self.assertFalse(a._validate_model_output(unexpected))
+
+    def test_model_output_validation_rejects_unsupported_evidence_claim(self):
+        a = Agent(PACK, tempfile.mkdtemp())
+        user = self._agent_user(a)
+        at = dt('2026-10-01T12:00:00Z')
+        candidate = {
+            'goal_id': 'G04',
+            'eligible': False,
+            'confidence': 0.2,
+            'reason': 'untrusted text',
+            'evidence_refs': [{
+                'event_id': 'not-trusted',
+                'event': 'purchase_completed',
+                'received_at': '2026-10-01T11:00:00Z',
+            }],
+        }
+        self.assertFalse(a._validate_model_output(candidate, user, at, 'd1'))
+        malformed = dict(candidate, evidence_refs=[{'event_id': 'not-trusted'}])
+        self.assertFalse(a._validate_model_output(malformed, user, at, 'd1'))
+
+    def test_model_output_validation_rejects_invalid_catalogue_claims(self):
+        a = Agent(PACK, tempfile.mkdtemp())
+        valid = {
+            'goal_id': 'G04',
+            'eligible': False,
+            'confidence': 0.2,
+            'reason': 'untrusted text',
+        }
+        self.assertFalse(a._validate_model_output(
+            dict(valid, catalogue_ids=['missing-title']), self._agent_user(a),
+            dt('2026-10-01T12:00:00Z'), 'd1'
+        ))
+        self.assertFalse(a._validate_model_output(
+            dict(valid, dialect='unknown'), self._agent_user(a),
+            dt('2026-10-01T12:00:00Z'), 'd1'
+        ))
+
+    def test_invalid_model_output_fails_closed_with_auditable_reason(self):
+        a = Agent(PACK, tempfile.mkdtemp())
+        event = self._trigger(a, 'app_open', 'invalid-model-output', 'session-model')
+        event['_failure_reason'] = 'model output contains an unknown goal_id'
+        a.handle_trigger(event)
+        self.assertEqual(a.actions, [])
+        self.assertEqual(a.decisions[-1]['decision'], 'none')
+        self.assertIn('unknown goal_id', a.decisions[-1]['reason'])
 
     def test_provider_timeout_and_data_store_failure_fail_closed(self):
         a = Agent(PACK, tempfile.mkdtemp())

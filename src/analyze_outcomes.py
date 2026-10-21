@@ -106,7 +106,7 @@ def main():
     groups=defaultdict(list)
     for user in index: groups[arms.get(user,'unknown')].append(user in play_users)
     def stats(vals): return {'n':len(vals),'successes':sum(vals),'rate':round(sum(vals)/len(vals),4) if vals else None}
-    agent=stats(groups.get('agent',[])); hold=stats(groups.get('holdout',[])); diff=(agent['rate']-hold['rate']) if agent['rate'] is not None and hold['rate'] is not None else None
+    agent=stats(groups.get('agent',[])); hold=stats(groups.get('holdout',[])); diff=(agent['successes']/agent['n']-hold['successes']/hold['n']) if agent['n'] and hold['n'] else None
     eligible=defaultdict(list)
     for row in goal_rows:
         if row['arm'] in ('agent','holdout'):
@@ -145,12 +145,12 @@ def main():
     final=[
         '# One User, One Agent — replay report','',
         '## Implementation summary','',
-        'The deterministic offline agent processes app-open triggers in delivery order, keeps per-viewer goal/evidence state, records source conflicts, and publishes a dialect-specific home page only when safety checks pass. Holdout users receive no actions. Messaging is disabled in this baseline.','',
+        'The deterministic offline agent processes every trigger in delivery order, correlates login_success and app_open by session, keeps per-viewer goal/evidence state, records source conflicts, and publishes a dialect-specific home page only when safety checks pass. Holdout users receive no actions. Messaging is disabled in this baseline.','',
         '## Validation','',
         f"- Decisions: {sum(1 for _ in readj(os.path.join(a.out,'decisions.jsonl')))}",
         f"- Home-page actions accepted by simulator: {sim_report.get('counts',{}).get('home_page_accepted',0)}",
         f"- Simulator policy problems: {sim_report.get('policy_problem_count',0)}",
-        f"- Automated tests: run `python -m unittest discover -s tests -v` (12 test cases)",
+        f"- Automated tests: run `python -m unittest discover -s tests -v` (24 test cases)",
         f"- Processing latency: mean {latency.get('mean_processing_ms')} ms, p95 {latency.get('p95_processing_ms')} ms, max {latency.get('max_processing_ms')} ms; target under 60,000 ms.",'',
         '## Impact','',
         f"- Agent-arm play rate: {agent['rate']:.1%} ({agent['successes']}/{agent['n']})",
