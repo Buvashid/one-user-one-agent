@@ -9,3 +9,5 @@ venv/
 .DS_Store
 Thumbs.db
 one_user_one_agent_pack/
+# Local replay outputs
+final_run/
