@@ -1,0 +1,8 @@
+{
+  "decisions": 2558,
+  "mean_processing_ms": 0.606,
+  "p95_processing_ms": 1.964,
+  "max_processing_ms": 7.688,
+  "target_ms": 60000,
+  "within_target": true
+}

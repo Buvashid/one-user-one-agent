@@ -1,0 +1,11 @@
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+one_user_one_agent_pack/
