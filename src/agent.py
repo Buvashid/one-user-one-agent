@@ -593,6 +593,13 @@ class Agent:
                         'profile_updated_at': p.get('updated_at')
                     })
 
+        occurred_at = dt(e.get('occurred_at'))
+        received_at = dt(e.get('received_at') or e.get('deliver_at'))
+        event_age_s = max(
+            0,
+            round((received_at - occurred_at).total_seconds(), 3)
+        ) if occurred_at and received_at else 0
+
         shadow_goal = None
         failed_dependencies = self._dependency_failure(at)
 
@@ -600,6 +607,11 @@ class Agent:
             choice = self._no_action(
                 'dependency unavailable/degraded: ' + ', '.join(failed_dependencies)
                 + '; fail-closed fallback'
+            )
+        elif e.get('event') == 'app_open' and event_age_s >= 72 * 60 * 60:
+            choice = self._no_action(
+                f'stale buffered app_open: event age {event_age_s} seconds; '
+                'no foreground action'
             )
         elif self.arms.get(u) == 'holdout':
             # Shadow-assign an eligible goal for evaluation while still publishing no intervention.
@@ -687,12 +699,7 @@ class Agent:
             'trigger_event_id': e['event_id'],
             'trigger_received_at': e.get('received_at'),
             'deliver_at': e['deliver_at'],
-            'event_age_s': max(
-                0,
-                round((
-                    at - dt(e.get('received_at') or e['deliver_at'])
-                ).total_seconds(), 3)
-            ),
+            'event_age_s': event_age_s,
             'current_dialect': dialect,
             'dialect_source': 'trigger.app_dialect' if dialect else None,
             'dialect_conflicts': dialect_conflicts,
@@ -765,6 +772,28 @@ class Agent:
                 if obj.get('event') == 'notification_opt_out':
                     # State remains event-sourced; _eligible_goal reads the history. Messaging is disabled by default.
                     pass
+                continue
+
+            if obj.get('event') == 'login_success':
+                self.decision_n += 1
+                did = f'D-{self.decision_n:05d}'
+                self.decisions.append({
+                    'decision_id': did,
+                    'user_id': obj['user_id'],
+                    'trigger_event_id': obj['event_id'],
+                    'trigger_received_at': obj.get('received_at'),
+                    'deliver_at': obj['deliver_at'],
+                    'current_dialect': obj.get('app_dialect'),
+                    'evidence_event_ids': [],
+                    'goal_id': None,
+                    'decision': 'none',
+                    'reason': 'login_success recorded; foreground action is evaluated on app_open in the same session',
+                    'processing_ms': 0.1,
+                    'published_action_id': None,
+                    'checks': {'passed': ['trigger_recorded'], 'failed': []}
+                })
+                self.latencies.append(0.1)
+                self.handled_triggers.add(obj['event_id'])
                 continue
 
             if obj.get('event') != 'app_open':

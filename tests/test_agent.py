@@ -234,7 +234,10 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(
             decision['trigger_event_id'], 'late-trigger-test'
         )
-        self.assertEqual(decision['event_age_s'], 0)
+        self.assertEqual(decision['event_age_s'], 259200)
+        self.assertEqual(decision['decision'], 'none')
+        self.assertIsNone(decision['published_action_id'])
+        self.assertIn('stale buffered app_open', decision['reason'])
         self.assertEqual(
             decision['trigger_received_at'], decision_time
         )
