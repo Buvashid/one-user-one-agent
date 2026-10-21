@@ -17,6 +17,20 @@ python -m unittest discover -s tests -v
 
 The replay writes decisions, actions, goal commitments, durable viewer state, latency metrics, and a control audit. The simulator produces outcome events. The analyzer attributes goal outcomes and computes the randomized intention-to-treat comparison. Outputs are deterministic apart from measured processing latency.
 
+## Optional real-provider contract probe
+
+Mock mode remains the default and the replay never makes network requests. An OpenAI-compatible provider can be tested explicitly without the private pack or any replay data:
+
+```powershell
+$env:MODEL_MODE = "real"
+$env:OPENAI_API_KEY = "<authorized key>"
+$env:MODEL_NAME = "gpt-4o-mini" # optional; this is the default
+# $env:MODEL_BASE_URL = "https://api.openai.com/v1/chat/completions" # optional
+python -m unittest tests.test_model_provider.RealProviderSmokeTests -v
+```
+
+The probe sends only a fixed synthetic contract prompt and accepts only a safe `abstain` response with claims supported by synthetic context. It never loads the assignment pack and never sends user IDs, sessions, events, catalogue data, or evidence. The key is read from the environment and is never printed. Provider failures and invalid responses fail closed. One live request may incur provider charges and latency; the smoke test is skipped unless real mode and a key are explicitly configured.
+
 ## Decision and safety rules
 
 - One active goal is retained per viewer while its window remains open.
@@ -30,6 +44,7 @@ The replay writes decisions, actions, goal commitments, durable viewer state, la
 - Holdout users receive zero actions. Provider faults and dependency outages/degradation fail closed to no action.
 - Catalogue content must be available at decision time, match the current dialect, and be deduplicated by `content_slug`; rows contain 3–10 titles and at most six rows.
 - The deterministic rules engine is authoritative. Catalogue descriptions and untrusted model-like output are not decision instructions or action inputs.
+- The optional real-provider probe validates an OpenAI-compatible response contract only; it cannot authorize or publish a replay action.
 - Push/WhatsApp messaging is disabled in this baseline, avoiding consent, quiet-hour, frequency-cap and template risks.
 - The G03 rule correction is applied when its control event arrives and recorded in `sample_run/control_audit.json`.
 - G07 stores the target `content_slug`; a play on a different series does not count as success.

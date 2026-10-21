@@ -5,4 +5,5 @@
 - Used the assistant to draft tests and documentation. The code was then run locally against the supplied synthetic pack; the replay, simulator, analyzer and automated tests were executed and their outputs inspected.
 - Verification performed: check holdout receives no actions, inspect simulator policy-problem count, review goal-level and intention-to-treat reports, inspect control audit, and verify latency against the 60-second budget.
 - No pack contents were sent to an external model/provider. The assignment treats the pack as personal data and says not to upload it to services that retain or train on submitted content.
+- The optional real-provider adapter, when explicitly enabled, sends only a fixed synthetic contract prompt and validates a safe abstain response against synthetic context. It is not used by replay and cannot authorize actions. No live provider test has been claimed unless separately run with an authorized key.
 - AI-generated code is treated as a draft, not proof of correctness. Known limitations and the synthetic nature of the impact estimate are documented separately.
