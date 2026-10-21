@@ -20,10 +20,14 @@ The replay writes decisions, actions, goal commitments, durable viewer state, la
 - One active goal is retained per viewer while its window remains open.
 - `deliver_at` and server `received_at` are used for replay ordering and evidence freshness; device `occurred_at`/`sent_at` values are retained as context but are not trusted as the arrival clock.
 - Duplicate event IDs and duplicate trigger IDs are idempotent.
+- Every trigger record receives one auditable decision; duplicate trigger IDs receive an explicit no-action decision.
+- `login_success` and `app_open` are correlated by `(user_id, session_id)` in either delivery order; login never publishes a foreground action.
+- Every decision records `event_age_s` from `received_at - occurred_at`, or an explicit missing-timestamp error.
 - Current trigger `app_dialect` takes precedence for the current page; conflicts with the profile dialect are recorded explicitly.
 - A trustworthy paid purchase received after the profile's update timestamp supersedes a stale subscription snapshot for goal eligibility.
 - Holdout users receive zero actions. Provider faults and dependency outages/degradation fail closed to no action.
 - Catalogue content must be available at decision time, match the current dialect, and be deduplicated by `content_slug`; rows contain 3–10 titles and at most six rows.
+- The deterministic rules engine is authoritative. Catalogue descriptions and untrusted model-like output are not decision instructions or action inputs.
 - Push/WhatsApp messaging is disabled in this baseline, avoiding consent, quiet-hour, frequency-cap and template risks.
 - The G03 rule correction is applied when its control event arrives and recorded in `sample_run/control_audit.json`.
 - G07 stores the target `content_slug`; a play on a different series does not count as success.

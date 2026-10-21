@@ -82,6 +82,8 @@ class Agent:
         self.inapp_day = {}
         self.withdrawn = {}
         self.dependency_unavailable = {}
+        self.store_failure = None
+        self.session_events = defaultdict(set)
         self.control_audit = []
 
         with open(os.path.join(pack, 'config/interventions.json'), encoding='utf-8') as f:
@@ -319,6 +321,72 @@ class Agent:
                 active.append(dep)
         return active
 
+    def _event_age(self, event):
+        occurred_at = dt(event.get('occurred_at'))
+        received_at = dt(event.get('received_at'))
+        if occurred_at is None or received_at is None:
+            return None, 'missing occurred_at or received_at'
+        return round((received_at - occurred_at).total_seconds(), 3), None
+
+    def _session_key(self, event):
+        session_id = event.get('session_id')
+        return (event.get('user_id'), session_id) if session_id else None
+
+    def _record_session_event(self, event):
+        key = self._session_key(event)
+        if key:
+            self.session_events[key].add(event.get('event'))
+        return key
+
+    def _update_session_decisions(self, key):
+        if not key:
+            return
+        event_types = self.session_events[key]
+        correlated = {'login_success', 'app_open'} <= event_types
+        for decision in self.decisions:
+            if (decision.get('user_id'), decision.get('session_id')) == key:
+                decision['session_event_types'] = sorted(event_types)
+                decision['session_correlated'] = correlated
+
+    def _failure_decision(self, event, reason, error=None):
+        self.decision_n += 1
+        age, age_error = self._event_age(event)
+        decision = {
+            'decision_id': f'D-{self.decision_n:05d}',
+            'user_id': event.get('user_id'),
+            'trigger_event_id': event.get('event_id'),
+            'session_id': event.get('session_id'),
+            'trigger_received_at': event.get('received_at'),
+            'deliver_at': event.get('deliver_at'),
+            'event_age_s': age,
+            'event_age_error': age_error,
+            'current_dialect': event.get('app_dialect'),
+            'session_event_types': sorted(
+                self.session_events.get(self._session_key(event), set())
+            ),
+            'session_correlated': False,
+            'goal_id': None,
+            'decision': 'none',
+            'reason': reason,
+            'processing_ms': 0.1,
+            'published_action_id': None,
+            'checks': {'passed': [], 'failed': [reason]},
+        }
+        if error:
+            decision['error_type'] = type(error).__name__
+        self.decisions.append(decision)
+        self.latencies.append(0.1)
+        self.handled_triggers.add(event.get('event_id'))
+        self._update_session_decisions(self._session_key(event))
+
+    def _validate_model_output(self, output):
+        # The deterministic rules engine is authoritative; model output is never action input.
+        if output is None:
+            return True
+        if not isinstance(output, dict):
+            return False
+        return set(output) <= {'goal_id', 'eligible', 'confidence', 'reason'}
+
     def _available(self, t, at):
         return (
             t['_from'] is not None
@@ -546,11 +614,15 @@ class Agent:
 
         return {"passed": passed, "failed": failed}
 
-    def handle_trigger(self, e):
+    def _handle_trigger(self, e):
         start = time.perf_counter()
-        at = dt(e['deliver_at'])
+        at = dt(e.get('deliver_at') or e.get('received_at'))
+        if at is None:
+            self._failure_decision(e, 'missing deliver_at/received_at')
+            return
         u = e['user_id']
         dialect = e.get('app_dialect')
+        session_key = self._record_session_event(e)
         self.decision_n += 1
         did = f'D-{self.decision_n:05d}'
         p = self.profiles.get(u)
@@ -593,22 +665,34 @@ class Agent:
                         'profile_updated_at': p.get('updated_at')
                     })
 
-        occurred_at = dt(e.get('occurred_at'))
-        received_at = dt(e.get('received_at') or e.get('deliver_at'))
-        event_age_s = max(
-            0,
-            round((received_at - occurred_at).total_seconds(), 3)
-        ) if occurred_at and received_at else 0
+        event_age_s, event_age_error = self._event_age(e)
 
         shadow_goal = None
         failed_dependencies = self._dependency_failure(at)
+        failure_reason = e.get('_failure_reason')
 
-        if failed_dependencies:
+        if e.get('event_id') in self.handled_triggers:
+            choice = self._no_action('duplicate trigger event_id')
+        elif self.store_failure:
+            choice = self._no_action(
+                f'data-store failure: {self.store_failure}; fail-closed fallback'
+            )
+        elif failure_reason:
+            choice = self._no_action(f'{failure_reason}; deterministic fallback fails closed')
+        elif failed_dependencies:
             choice = self._no_action(
                 'dependency unavailable/degraded: ' + ', '.join(failed_dependencies)
                 + '; fail-closed fallback'
             )
-        elif e.get('event') == 'app_open' and event_age_s >= 72 * 60 * 60:
+        elif e.get('event') == 'login_success':
+            choice = self._no_action(
+                'login_success recorded; login cannot publish a foreground action'
+            )
+        elif (
+            e.get('event') == 'app_open'
+            and event_age_s is not None
+            and event_age_s >= 72 * 60 * 60
+        ):
             choice = self._no_action(
                 f'stale buffered app_open: event age {event_age_s} seconds; '
                 'no foreground action'
@@ -618,8 +702,6 @@ class Agent:
             if p and dialect:
                 shadow_goal = self._eligible_goal(u, at, dialect)
             choice = self._no_action('randomized holdout: no agent actions permitted')
-        elif e.get('event_id') in getattr(self, 'handled_triggers', set()):
-            choice = self._no_action('duplicate trigger event_id')
         elif not p:
             choice = self._no_action('no profile snapshot; insufficient evidence for safe goal eligibility')
         elif not dialect:
@@ -697,9 +779,11 @@ class Agent:
             'decision_id': did,
             'user_id': u,
             'trigger_event_id': e['event_id'],
+            'session_id': e.get('session_id'),
             'trigger_received_at': e.get('received_at'),
             'deliver_at': e['deliver_at'],
             'event_age_s': event_age_s,
+            'event_age_error': event_age_error,
             'current_dialect': dialect,
             'dialect_source': 'trigger.app_dialect' if dialect else None,
             'dialect_conflicts': dialect_conflicts,
@@ -741,6 +825,18 @@ class Agent:
         })
 
         self.handled_triggers.add(e['event_id'])
+        self._update_session_decisions(session_key)
+
+    def handle_trigger(self, event):
+        try:
+            self._handle_trigger(event)
+        except Exception as error:
+            self._record_session_event(event)
+            self._failure_decision(
+                event,
+                f'agent dependency failure: {error}; fail-closed fallback',
+                error,
+            )
 
     def run(self):
         os.makedirs(self.out, exist_ok=True)
@@ -761,91 +857,37 @@ class Agent:
             timeline.append((dt(c['at']), -1, 'control', c))
         timeline.sort(key=lambda x: (x[0], x[1]))
 
-        # Replay only app-open triggers. Control changes apply at their recorded time.
+        # Control changes apply at their recorded time; every trigger gets one decision.
         for when, _, kind, obj in timeline:
             if kind == 'control':
                 self._apply_control(obj, when)
                 continue
 
             if kind == 'event':
-                self._add_event(obj)
+                try:
+                    self._add_event(obj)
+                except Exception as error:
+                    self.store_failure = f'{type(error).__name__}: {error}'
                 if obj.get('event') == 'notification_opt_out':
                     # State remains event-sourced; _eligible_goal reads the history. Messaging is disabled by default.
                     pass
                 continue
 
-            if obj.get('event') == 'login_success':
-                self.decision_n += 1
-                did = f'D-{self.decision_n:05d}'
-                self.decisions.append({
-                    'decision_id': did,
-                    'user_id': obj['user_id'],
-                    'trigger_event_id': obj['event_id'],
-                    'trigger_received_at': obj.get('received_at'),
-                    'deliver_at': obj['deliver_at'],
-                    'current_dialect': obj.get('app_dialect'),
-                    'evidence_event_ids': [],
-                    'goal_id': None,
-                    'decision': 'none',
-                    'reason': 'login_success recorded; foreground action is evaluated on app_open in the same session',
-                    'processing_ms': 0.1,
-                    'published_action_id': None,
-                    'checks': {'passed': ['trigger_recorded'], 'failed': []}
-                })
-                self.latencies.append(0.1)
-                self.handled_triggers.add(obj['event_id'])
-                continue
-
-            if obj.get('event') != 'app_open':
-                continue
-
             failed_dependencies = self._dependency_failure(when)
             fault = faults.get(obj['event_id'])
-
-            # Fail closed during data-store/provider incidents; never publish from partial evidence.
+            trigger = dict(obj)
             if failed_dependencies:
-                self.decision_n += 1
-                did = f'D-{self.decision_n:05d}'
-                self.decisions.append({
-                    'decision_id': did,
-                    'user_id': obj['user_id'],
-                    'trigger_event_id': obj['event_id'],
-                    'trigger_received_at': obj.get('received_at'),
-                    'deliver_at': obj['deliver_at'],
-                    'current_dialect': obj.get('app_dialect'),
-                    'evidence_event_ids': [],
-                    'goal_id': None,
-                    'decision': 'none',
-                    'reason': 'dependency unavailable/degraded: ' + ', '.join(failed_dependencies) + '; fail-closed fallback',
-                    'processing_ms': 0.1,
-                    'published_action_id': None,
-                    'checks': {'passed': ['holdout_check'], 'failed': ['dependency_health']}
-                })
-                self.latencies.append(0.1)
-                self.handled_triggers.add(obj['event_id'])
-
-            # Fail closed on model/provider faults: no unsupported claim may bypass deterministic evidence.
+                trigger['_failure_reason'] = (
+                    'dependency unavailable/degraded: '
+                    + ', '.join(failed_dependencies)
+                )
             elif fault:
-                self.decision_n += 1
-                did = f'D-{self.decision_n:05d}'
-                self.decisions.append({
-                    'decision_id': did,
-                    'user_id': obj['user_id'],
-                    'trigger_event_id': obj['event_id'],
-                    'trigger_received_at': obj.get('received_at'),
-                    'deliver_at': obj['deliver_at'],
-                    'current_dialect': obj.get('app_dialect'),
-                    'evidence_event_ids': [],
-                    'goal_id': None,
-                    'decision': 'none',
-                    'reason': f"model fault '{fault['fault']}'; deterministic fallback fails closed",
-                    'processing_ms': 0.1,
-                    'published_action_id': None
-                })
-                self.latencies.append(0.1)
-                self.handled_triggers.add(obj['event_id'])
-            else:
-                self.handle_trigger(obj)
+                trigger['_failure_reason'] = f"model fault '{fault['fault']}'"
+                if 'model_output' in fault and not self._validate_model_output(
+                    fault['model_output']
+                ):
+                    trigger['_failure_reason'] = 'malformed model output'
+            self.handle_trigger(trigger)
 
         write_jsonl(os.path.join(self.out, 'decisions.jsonl'), self.decisions)
         write_jsonl(os.path.join(self.out, 'actions.jsonl'), self.actions)
